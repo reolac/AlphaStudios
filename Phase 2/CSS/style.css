@@ -14,7 +14,7 @@
 	border: 2px solid;
 	padding-bottom: 10px;
 	padding-left: 10px;
-	background-color: #AAACF0;
+	background-color: white;
 		
 }
 
@@ -24,7 +24,7 @@
 
 .createButton{
 	padding: 10px 15px;
-    background: #AAACF0;
+    background: white;
 	margin-left: auto;
 	margin-right: auto;
 	font-weight: bolder;
@@ -42,9 +42,28 @@
 	height: 50px;
 }
 
+.allTablesButton{
+	position: fixed;
+	margin-left: 25%;
+	margin-top: 10%;
+}
+
+.dataInsertion{
+	position: fixed;
+	margin-left: 65%;
+	margin-top: 10%;
+}
+
+.adminAccess{
+	position: fixed;
+	margin-left: 45%;
+	margin-top: 20%;
+	
+
+}
 
 body {
-	background-color: #7C7FDE;
+	background-color: white;
 
 }
 
