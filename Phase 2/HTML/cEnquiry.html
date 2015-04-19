@@ -1,51 +1,95 @@
-<!DOCTYPE HTML>
-<html lang="en-GB">
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#enquiry{
+    font-family: "Times New Roman", Arial, Helvetica, sans-serif;
+    width: 100%;
+    border-collapse: collapse;
+}
 
-    <head>
-        <meta charset="UTF-8">
-        <title>Create Enquiry</title>
-        <link rel="stylesheet" type="text/css" href="../css/style.css">
-    </head>
+#enquiry td, #enquiry th {
+    font-size: 13px;
+    border: 1px solid black;
+    padding: 3px 7px 2px 7px;
+}
 
-    <body>
+#enquiry th {
+    font-size: 14px;
+    text-align: left;
+    padding-top: 5px;
+    padding-bottom: 4px;
+    background-color: white;
+    color: black;
+}
 
-        <h2 class="title">GAP ELECTRICAL</h2>
+#enquiry tr.alt td {
+    color: #000000;
+    background-color: #EAF2D3;
+}
+</style>
+<link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+<body>
+<div id= "container">
+        <p><span class="gap">GAP</span><span class="electrical"> Electrical and Mechanical Services Ltd</span>
 
-        <div class="content">
+</div>
 
-            <h1 class="title">New Enquiry</h1>
+<h1 class="subTitle">ENQUIRY - ORDER REGISTER</h1>
 
-            <table>
-                <tr>
-                    <th>Attribute</th>
-                    <th>Input</th> 
-                </tr>
+<table id="enquiry">
+  <tr>
+    <th>Date and Time of Enquiry</th>
+    <th>Mode of Enquiry</th>
+    <th>Reference</th>
+    <th>Name and address of the customer</th>
+    <th>Customer's Requirements and Delivery Date</th>
+    <th>Quotation Reference and Follow-Up Details</th>
+    <th>Customer Order Reference</th>
+    <th>Order Acceptance Reviewer & Signature of Reviewer</th>
+    <th>Work Order Reference</th>
+    <th>Work Order Execution Status</th>
+  </tr>
+  <tr>
+    <td><input type="text" name="dateandtime" id="dateandtime"></td>
+    <td><input type="text" name="modeOfEnquiry" id="modeOfEnquiry"></td>
+    <td><input type="text" name="reference" id="reference"></td>
+    <td><input type="text" name="nameandAddressofEnquiry" id="nameandAddressofEnquiry" ></td>
+    <td><input type="text" name="customerRequirementsAndDeliveryDate" id="customerRequirementsAndDeliveryDate" ></td>
+    <td><input type="text" name="quotation" id="quotation"></td>
+    <td><input type="text" name="customerOrderReference" id="customerOrderReference"></td>
+	<td><input type="text" name="orderAcceptance" id="orderAcceptance"></td>
+    <td><input type="text" name="workOrderReference" id="workOrderReference" ></td>
+    <td><input type="text" name="workOrderExecution" id="workOrderExecution" ></td>
+  </tr>
+  <tr class="alt">
+    <td>Test Field</td>
+    <td>Test Field</td>
+    <td>Test Field</td>
+    <td>Test Field</td>
+    <td>Test Field</td>
+    <td>Test Field</td>
+    <td>Test Field</td>
+    <td>Test Field</td>
+    <td>Test Field</td>
+    <td>Test Field</td>
+  </tr>
+  <tr>
+    <td>Test Field</td>
+    <td>Test Field</td>
+    <td>Test Field</td>
+    <td>Test Field</td>
+    <td>Test Field</td>
+    <td>Test Field</td>
+    <td>Test Field</td>
+    <td>Test Field</td>
+    <td>Test Field</td>
+    <td>Test Field</td>
+  </tr>
+</table>
 
-                <tr>
-                    <td>Type</td>
-                    <td><input type="text" name="type" id="type" class="colorOne"></td>
-                </tr>
+ <button type="button" id="sendEnquiry" class="createButton">Create</button>
 
-                <tr>
-                    <td>Customer Name</td>
-                    <td><input type="text" name="customerName" id="customerName" class="colorTwo"></td>
-                </tr>
-
-                <tr>
-                    <td>Date & Time</td>
-                    <td><input type="text" name="dateAndTime" id="dateAndTime" class="colorOne"></td>
-                </tr>
-
-                <tr>
-                    <td>Enquiry</td>
-                    <td><input type="text" name="enquiry" id="enquiry" class="colorTwo"></td>
-                </tr>
-
-            </table>
-
-        </div>
-
-        <button type="button" id="sendEnquiry" class="createButton">Create</button>
-
-    </body>
+</body>
 </html>
