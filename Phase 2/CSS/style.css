@@ -97,3 +97,28 @@ a {
     float: left;
 }
 
+#enquiry{
+    font-family: "Times New Roman", Arial, Helvetica, sans-serif;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#enquiry td, #enquiry th {
+    font-size: 13px;
+    border: 1px solid black;
+    padding: 3px 7px 2px 7px;
+}
+
+#enquiry th {
+    font-size: 14px;
+    text-align: left;
+    padding-top: 5px;
+    padding-bottom: 4px;
+    background-color: white;
+    color: black;
+}
+
+#enquiry tr.alt td {
+    color: #000000;
+    background-color: #EAF2D3;
+}
