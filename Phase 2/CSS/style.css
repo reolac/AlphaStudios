@@ -1,21 +1,9 @@
-.colorOne {
-	border: 1px solid;
-}
-
-.colorTwo {
-	border: 1px solid;
-	border-color: grey;	
-}
-
-.content {
-	margin-left: auto;
-	margin-right: auto;
-	width: 30%;
+.costForm {
+	margin-left: 15%;
+	margin-right: 15%;
 	border: 2px solid;
 	padding-bottom: 10px;
-	padding-left: 10px;
-	background-color: white;
-		
+	padding-left: 10px;	
 }
 
 .title {
@@ -24,7 +12,7 @@
 
 .createButton{
 	padding: 10px 15px;
-    background: white;
+    background: #AAACF0;
 	margin-left: auto;
 	margin-right: auto;
 	font-weight: bolder;
@@ -42,35 +30,25 @@
 	height: 50px;
 }
 
-.allTablesButton{
-	position: fixed;
-	margin-left: 25%;
-	margin-top: 10%;
+tr, td, th{
+	border: 1px solid;
 }
 
-.dataInsertion{
-	position: fixed;
-	margin-left: 65%;
-	margin-top: 10%;
+table {
+    border-collapse: collapse;
 }
-
-.adminAccess{
-	position: fixed;
-	margin-left: 45%;
-	margin-top: 20%;
-	
-
-}
-
-body {
-	background-color: white;
-
-}
-
 
 a {
     display: block;
     width: 90px;
     float: left;
+}
+
+*:focus {
+    outline: 0;
+}
+
+textarea:focus, input:focus{
+    outline: 0;
 }
 
