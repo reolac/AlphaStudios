@@ -1,51 +1,115 @@
-<!DOCTYPE HTML>
-<html lang="en-GB">
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="../css/style.css" rel="stylesheet" type="text/css">
 
-    <head>
-        <meta charset="UTF-8">
-        <title>Create Enquiry</title>
-        <link rel="stylesheet" type="text/css" href="../css/style.css">
-    </head>
+	<title>Create Enquiry Form</title>
+</head>
 
-    <body>
+<body>
+	<div id="container">
+		<p><span class="gap">GAP</span> <span class="electrical">Electrical and
+		Mechanical Services Ltd</span></p>
+	</div>
 
-        <h2 class="title">GAP ELECTRICAL</h2>
+	<h1 class="subTitle">ENQUIRY - ORDER REGISTER</h1>
 
-        <div class="content">
+	<table id="enquiry">
+		<tr>
+			<th>Date and Time of Enquiry</th>
 
-            <h1 class="title">New Enquiry</h1>
+			<th>Mode of Enquiry</th>
 
-            <table>
-                <tr>
-                    <th>Attribute</th>
-                    <th>Input</th> 
-                </tr>
+			<th>Reference</th>
 
-                <tr>
-                    <td>Type</td>
-                    <td><input type="text" name="type" id="type" class="colorOne"></td>
-                </tr>
+			<th>Name and address of the customer</th>
 
-                <tr>
-                    <td>Customer Name</td>
-                    <td><input type="text" name="customerName" id="customerName" class="colorTwo"></td>
-                </tr>
+			<th>Customer's Requirements and Delivery Date</th>
 
-                <tr>
-                    <td>Date & Time</td>
-                    <td><input type="text" name="dateAndTime" id="dateAndTime" class="colorOne"></td>
-                </tr>
+			<th>Quotation Reference and Follow-Up Details</th>
 
-                <tr>
-                    <td>Enquiry</td>
-                    <td><input type="text" name="enquiry" id="enquiry" class="colorTwo"></td>
-                </tr>
+			<th>Customer Order Reference</th>
 
-            </table>
+			<th>Order Acceptance Reviewer & Signature of Reviewer</th>
 
-        </div>
+			<th>Work Order Reference</th>
 
-        <button type="button" id="sendEnquiry" class="createButton">Create</button>
+			<th>Work Order Execution Status</th>
+		</tr>
 
-    </body>
+		<tr>
+			<td><input id="dateandtime" name="dateandtime" type="text"></td>
+
+			<td><input id="modeOfEnquiry" name="modeOfEnquiry" type=
+			"text"></td>
+
+			<td><input id="reference" name="reference" type="text"></td>
+
+			<td><input id="nameandAddressofEnquiry" name=
+			"nameandAddressofEnquiry" type="text"></td>
+
+			<td><input id="customerRequirementsAndDeliveryDate" name=
+			"customerRequirementsAndDeliveryDate" type="text"></td>
+
+			<td><input id="quotation" name="quotation" type="text"></td>
+
+			<td><input id="customerOrderReference" name=
+			"customerOrderReference" type="text"></td>
+
+			<td><input id="orderAcceptance" name="orderAcceptance" type=
+			"text"></td>
+
+			<td><input id="workOrderReference" name="workOrderReference" type=
+			"text"></td>
+
+			<td><input id="workOrderExecution" name="workOrderExecution" type=
+			"text"></td>
+		</tr>
+
+		<tr class="alt">
+			<td>Test Field</td>
+
+			<td>Test Field</td>
+
+			<td>Test Field</td>
+
+			<td>Test Field</td>
+
+			<td>Test Field</td>
+
+			<td>Test Field</td>
+
+			<td>Test Field</td>
+
+			<td>Test Field</td>
+
+			<td>Test Field</td>
+
+			<td>Test Field</td>
+		</tr>
+
+		<tr>
+			<td>Test Field</td>
+
+			<td>Test Field</td>
+
+			<td>Test Field</td>
+
+			<td>Test Field</td>
+
+			<td>Test Field</td>
+
+			<td>Test Field</td>
+
+			<td>Test Field</td>
+
+			<td>Test Field</td>
+
+			<td>Test Field</td>
+
+			<td>Test Field</td>
+		</tr>
+	</table><button class="createButton" id="sendEnquiry" type=
+	"button">Create</button>
+</body>
 </html>
