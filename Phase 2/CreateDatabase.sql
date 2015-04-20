@@ -22,9 +22,10 @@ DROP TABLE IF EXISTS `softwarehut`.`Customer` ;
 
 CREATE TABLE IF NOT EXISTS `softwarehut`.`Customer` (
   `Customer_ID` INT NULL,
-  `Address` VARCHAR(45) NULL,
-  `City` VARCHAR(45) NULL,
-  `Postcode` VARCHAR(45) NULL,
+  `Address` VARCHAR(45) NOT NULL,
+  `City` VARCHAR(45) NOT NULL,
+  `Postcode` VARCHAR(45) NOT NULL,
+  `Changed` TIMESTAMP NOT NULL,
   PRIMARY KEY (`Customer_ID`))
 ENGINE = InnoDB;
 
@@ -36,10 +37,11 @@ DROP TABLE IF EXISTS `softwarehut`.`Job` ;
 
 CREATE TABLE IF NOT EXISTS `softwarehut`.`Job` (
   `Job_ID` INT NULL,
-  `JCustomer_ID` INT NULL,
+  `JCustomer_ID` INT NOT NULL,
   `Project_Cost` DECIMAL NULL,
   `Completed` TINYINT(1) NULL,
   `DueDate` DATE NULL,
+  `Changed` TIMESTAMP NOT NULL,
   PRIMARY KEY (`Job_ID`),
   INDEX `Customer_ID_idx` (`JCustomer_ID` ASC),
   CONSTRAINT `JCustomer_ID`
@@ -57,8 +59,9 @@ DROP TABLE IF EXISTS `softwarehut`.`Purchase` ;
 
 CREATE TABLE IF NOT EXISTS `softwarehut`.`Purchase` (
   `Purchase_ID` INT NULL,
-  `PCustomer_ID` INT NULL,
-  `PJob_ID` INT NULL,
+  `PCustomer_ID` INT NOT NULL,
+  `PJob_ID` INT NOT NULL,
+  `Changed` TIMESTAMP NOT NULL,
   PRIMARY KEY (`Purchase_ID`),
   INDEX `Customer_ID_idx` (`PCustomer_ID` ASC),
   INDEX `Job_ID_idx` (`PJob_ID` ASC),
@@ -82,12 +85,13 @@ DROP TABLE IF EXISTS `softwarehut`.`Enquiry` ;
 
 CREATE TABLE IF NOT EXISTS `softwarehut`.`Enquiry` (
   `Enquiry_ID` INT NULL,
-  `ECustomer_ID` INT NULL,
+  `ECustomer_ID` INT NOT NULL,
   `ModeOfEnquiry` VARCHAR(45) NULL,
   `TimeOfEnquiry` DATE NULL,
   `CustomerReq` VARCHAR(45) NULL,
   `DeliveryDate` DATE NULL,
   `QuotationRef` VARCHAR(45) NULL,
+  `Changed` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`Enquiry_ID`),
   INDEX `Customer_ID_idx` (`ECustomer_ID` ASC),
   CONSTRAINT `ECustomer_ID`
@@ -105,8 +109,9 @@ DROP TABLE IF EXISTS `softwarehut`.`Order` ;
 
 CREATE TABLE IF NOT EXISTS `softwarehut`.`Order` (
   `Order_ID` INT NULL,
-  `OCustomer_ID` INT NULL,
+  `OCustomer_ID` INT NOT NULL,
   `Reviewer` VARCHAR(45) NULL,
+  `Changed` TIMESTAMP NOT NULL,
   PRIMARY KEY (`Order_ID`),
   INDEX `Customer_ID_idx` (`OCustomer_ID` ASC),
   CONSTRAINT `OCustomer_ID`
@@ -124,9 +129,10 @@ DROP TABLE IF EXISTS `softwarehut`.`Login` ;
 
 CREATE TABLE IF NOT EXISTS `softwarehut`.`Login` (
   `idLogin` INT NOT NULL AUTO_INCREMENT,
-  `user` VARCHAR(45) NULL,
-  `hashedpass` VARCHAR(45) NULL,
-  `hash` VARCHAR(45) NULL,
+  `user` VARCHAR(45) NOT NULL,
+  `hashedpass` VARCHAR(45) NOT NULL,
+  `hash` VARCHAR(45) NOT NULL,
+  `Changed` TIMESTAMP NOT NULL,
   PRIMARY KEY (`idLogin`))
 ENGINE = InnoDB;
 
@@ -134,3 +140,4 @@ ENGINE = InnoDB;
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
