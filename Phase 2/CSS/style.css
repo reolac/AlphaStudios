@@ -1,4 +1,3 @@
-
 .costForm {
 	margin-left: 15%;
 	margin-right: 15%;
@@ -102,7 +101,8 @@ allTablesButton, dataInsertion, adminAccess{
 
 body {
 	background-color: white;
-=======
+	}
+	
 tr, td, th{
 	border: 1px solid;
 }
@@ -123,8 +123,6 @@ a {
     float: left;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 *:focus {
     outline: 0;
 }
@@ -132,9 +130,7 @@ a {
 textarea:focus, input:focus{
     outline: 0;
 }
->>>>>>> origin/master
 
-=======
 #enquiry{
     font-family: "Times New Roman", Arial, Helvetica, sans-serif;
     width: 100%;
@@ -160,6 +156,3 @@ textarea:focus, input:focus{
     color: #000000;
     background-color: #EAF2D3;
 }
->>>>>>> origin/master
-=======
->>>>>>> parent of d25afad... Enquiry indented and CSS moved.
