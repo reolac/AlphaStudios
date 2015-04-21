@@ -1,16 +1,20 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
+		<meta charset="UTF-8">
 		<title>Sign-In</title>
+		<link rel="stylesheet" type="text/css" href="../css/Loginpage.css">
 	</head>
 	<body>
-		<div id="Sign-In">
-			<legend>LOG-IN HERE</legend>
-			<form method="POST" action="connectivity.php">
-				User<input type="text" name="u"><br>
-				Password<input type="password" name="p"><br>
+		<div id="loginMain">
+			<h1>Login</h1>
+			
+			<form id="loginDetails" method="POST" action="connectivity.php">
+				Username: <input class="usernameBox" type="text" name="u"><br>
+				Password: <input class="passwordBox" type="password" name="p"><br>
 				<input id="button" type="submit" name="submit" value="Log-In">
 			</form>
+			
 		</div>
 	</body>
 </html> 
