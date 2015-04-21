@@ -1,115 +1,95 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link href="../css/style.css" rel="stylesheet" type="text/css">
+<style>
+#enquiry{
+    font-family: "Times New Roman", Arial, Helvetica, sans-serif;
+    width: 100%;
+    border-collapse: collapse;
+}
 
-	<title>Create Enquiry Form</title>
+#enquiry td, #enquiry th {
+    font-size: 13px;
+    border: 1px solid black;
+    padding: 3px 7px 2px 7px;
+}
+
+#enquiry th {
+    font-size: 14px;
+    text-align: left;
+    padding-top: 5px;
+    padding-bottom: 4px;
+    background-color: white;
+    color: black;
+}
+
+#enquiry tr.alt td {
+    color: #000000;
+    background-color: #EAF2D3;
+}
+</style>
+<link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
-
 <body>
-	<div id="container">
-		<p><span class="gap">GAP</span> <span class="electrical">Electrical and
-		Mechanical Services Ltd</span></p>
-	</div>
+<div id= "container">
+        <p><span class="gap">GAP</span><span class="electrical"> Electrical and Mechanical Services Ltd</span>
 
-	<h1 class="subTitle">ENQUIRY - ORDER REGISTER</h1>
+</div>
 
-	<table id="enquiry">
-		<tr>
-			<th>Date and Time of Enquiry</th>
+<h1 class="subTitle">ENQUIRY - ORDER REGISTER</h1>
 
-			<th>Mode of Enquiry</th>
+<table id="enquiry">
+  <tr>
+    <th>Date and Time of Enquiry</th>
+    <th>Mode of Enquiry</th>
+    <th>Reference</th>
+    <th>Name and address of the customer</th>
+    <th>Customer's Requirements and Delivery Date</th>
+    <th>Quotation Reference and Follow-Up Details</th>
+    <th>Customer Order Reference</th>
+    <th>Order Acceptance Reviewer & Signature of Reviewer</th>
+    <th>Work Order Reference</th>
+    <th>Work Order Execution Status</th>
+  </tr>
+  <tr>
+    <td><input type="text" name="dateandtime" id="dateandtime"></td>
+    <td><input type="text" name="modeOfEnquiry" id="modeOfEnquiry"></td>
+    <td><input type="text" name="reference" id="reference"></td>
+    <td><input type="text" name="nameandAddressofEnquiry" id="nameandAddressofEnquiry" ></td>
+    <td><input type="text" name="customerRequirementsAndDeliveryDate" id="customerRequirementsAndDeliveryDate" ></td>
+    <td><input type="text" name="quotation" id="quotation"></td>
+    <td><input type="text" name="customerOrderReference" id="customerOrderReference"></td>
+	<td><input type="text" name="orderAcceptance" id="orderAcceptance"></td>
+    <td><input type="text" name="workOrderReference" id="workOrderReference" ></td>
+    <td><input type="text" name="workOrderExecution" id="workOrderExecution" ></td>
+  </tr>
+  <tr class="alt">
+    <td>Test Field</td>
+    <td>Test Field</td>
+    <td>Test Field</td>
+    <td>Test Field</td>
+    <td>Test Field</td>
+    <td>Test Field</td>
+    <td>Test Field</td>
+    <td>Test Field</td>
+    <td>Test Field</td>
+    <td>Test Field</td>
+  </tr>
+  <tr>
+    <td>Test Field</td>
+    <td>Test Field</td>
+    <td>Test Field</td>
+    <td>Test Field</td>
+    <td>Test Field</td>
+    <td>Test Field</td>
+    <td>Test Field</td>
+    <td>Test Field</td>
+    <td>Test Field</td>
+    <td>Test Field</td>
+  </tr>
+</table>
 
-			<th>Reference</th>
+ <button type="button" id="sendEnquiry" class="createButton">Create</button>
 
-			<th>Name and address of the customer</th>
-
-			<th>Customer's Requirements and Delivery Date</th>
-
-			<th>Quotation Reference and Follow-Up Details</th>
-
-			<th>Customer Order Reference</th>
-
-			<th>Order Acceptance Reviewer & Signature of Reviewer</th>
-
-			<th>Work Order Reference</th>
-
-			<th>Work Order Execution Status</th>
-		</tr>
-
-		<tr>
-			<td><input id="dateandtime" name="dateandtime" type="text"></td>
-
-			<td><input id="modeOfEnquiry" name="modeOfEnquiry" type=
-			"text"></td>
-
-			<td><input id="reference" name="reference" type="text"></td>
-
-			<td><input id="nameandAddressofEnquiry" name=
-			"nameandAddressofEnquiry" type="text"></td>
-
-			<td><input id="customerRequirementsAndDeliveryDate" name=
-			"customerRequirementsAndDeliveryDate" type="text"></td>
-
-			<td><input id="quotation" name="quotation" type="text"></td>
-
-			<td><input id="customerOrderReference" name=
-			"customerOrderReference" type="text"></td>
-
-			<td><input id="orderAcceptance" name="orderAcceptance" type=
-			"text"></td>
-
-			<td><input id="workOrderReference" name="workOrderReference" type=
-			"text"></td>
-
-			<td><input id="workOrderExecution" name="workOrderExecution" type=
-			"text"></td>
-		</tr>
-
-		<tr class="alt">
-			<td>Test Field</td>
-
-			<td>Test Field</td>
-
-			<td>Test Field</td>
-
-			<td>Test Field</td>
-
-			<td>Test Field</td>
-
-			<td>Test Field</td>
-
-			<td>Test Field</td>
-
-			<td>Test Field</td>
-
-			<td>Test Field</td>
-
-			<td>Test Field</td>
-		</tr>
-
-		<tr>
-			<td>Test Field</td>
-
-			<td>Test Field</td>
-
-			<td>Test Field</td>
-
-			<td>Test Field</td>
-
-			<td>Test Field</td>
-
-			<td>Test Field</td>
-
-			<td>Test Field</td>
-
-			<td>Test Field</td>
-
-			<td>Test Field</td>
-
-			<td>Test Field</td>
-		</tr>
-	</table><button class="createButton" id="sendEnquiry" type=
-	"button">Create</button>
 </body>
 </html>
