@@ -1,0 +1,75 @@
+.allTablesButton{
+        position: fixed;
+		width: auto;
+		height: auto;
+        text-decoration: none;
+		background-color: red;
+        color: white;
+        font-size: 20pt;
+        padding: 5% 5% 5% 5%;
+        margin: 0 0 0 0;
+        text-align: center;
+        font-family: Verdana, Geneva, sans-serif;
+}
+
+.dataInsertion{
+        position: fixed;
+		width: auto;
+		height: auto;
+		text-decoration: none;
+		background-color: blue;
+        color: white;
+        font-size: 20pt;
+        padding: 5% 5% 5% 5%;
+        margin: 0 0 0 30%;
+        text-align: center;
+        font-family: Verdana, Geneva, sans-serif;
+}
+
+.adminAccess{
+		
+        position: fixed;
+		width: auto;
+		height: auto;
+        text-decoration: none;
+		background-color: green;
+        color: white;
+        font-size: 20pt;
+        padding: 5% 5% 5% 5%;
+        margin: 0 0 0 60%;
+        text-align: center;
+        font-family: Verdana, Geneva, sans-serif;
+}
+
+.checkList {
+		position: fixed;
+		width: auto;
+		height: auto;
+        text-decoration: none;
+		background-color: black;
+        color: white;
+        font-size: 20pt;
+        padding: 5% 5% 5% 5%;
+        margin: 18% 0 0 2%;
+        text-align: center;
+        font-family: Verdana, Geneva, sans-serif;
+}
+
+.maintenanceSpec{
+		position: fixed;
+		width: auto;
+		height: auto;
+        text-decoration: none;
+		background-color: purple;
+        color: white;
+        font-size: 20pt;
+        padding: 5% 5% 5% 5%;
+        margin: 18% 0 0 29.5%;
+        text-align: center;
+        font-family: Verdana, Geneva, sans-serif;
+}
+
+ul{
+	list-style-type: none;
+	margin: 10% 0 0 0;
+}

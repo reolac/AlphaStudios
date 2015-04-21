@@ -23,10 +23,10 @@
 }
 
 .content {
+	margin-top: 10%;
 	margin-left: auto;
 	margin-right: auto;
 	width: 30%;
->>>>>>> origin/master
 	border: 2px solid;
 	padding-bottom: 10px;
 	padding-left: 10px;	
@@ -50,6 +50,14 @@
 
 .subTitle {
 	text-align: center;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+.logo{
+	position: fixed;
+	margin: -10% 0 0 30%;
+	height: 100px;
+	width: 500px;
 	font-family: "Times New Roman";
 	font-size: 24px;
 	font-weight: bold;
@@ -68,6 +76,19 @@
 
 }
 
+.loginButton{
+	padding: 10px 15px;
+    background: white;
+	margin-left: auto;
+	margin-right: auto;
+	font-weight: bolder;
+	border: 2px solid;
+	box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.75);
+	margin-top: 10px;
+	margin-left: 47%;
+
+}
+
 .navBar{
 	width: 800px;
 	margin-left: auto;
@@ -75,8 +96,23 @@
 	height: 50px;
 }
 
+
+allTablesButton, dataInsertion, adminAccess{
+    display: block;
+    width: 20%;
+}
+
+body {
+	background-color: white;
+=======
 tr, td, th{
 	border: 1px solid;
+}
+
+ul{
+    list-style-type: none;
+    text-decoration: none;
+    padding: 0;
 }
 
 table {
@@ -98,6 +134,7 @@ a {
 textarea:focus, input:focus{
     outline: 0;
 }
+>>>>>>> origin/master
 
 =======
 #enquiry{
