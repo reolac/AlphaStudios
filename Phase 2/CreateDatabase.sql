@@ -37,15 +37,15 @@ DROP TABLE IF EXISTS `softwarehut`.`Job` ;
 
 CREATE TABLE IF NOT EXISTS `softwarehut`.`Job` (
   `Job_ID` INT NULL,
-  `JCustomer_ID` INT NOT NULL,
+  `Customer` INT NOT NULL,
   `Project_Cost` DECIMAL NULL,
   `Completed` TINYINT(1) NULL,
   `DueDate` DATE NULL,
   `Changed` TIMESTAMP NOT NULL,
   PRIMARY KEY (`Job_ID`),
-  INDEX `Customer_ID_idx` (`JCustomer_ID` ASC),
+  INDEX `Customer_ID_idx` (`Customer` ASC),
   CONSTRAINT `JCustomer_ID`
-    FOREIGN KEY (`JCustomer_ID`)
+    FOREIGN KEY (`Customer`)
     REFERENCES `softwarehut`.`Customer` (`Customer_ID`)
     ON DELETE CASCADE
     ON UPDATE CASCADE)
@@ -59,19 +59,19 @@ DROP TABLE IF EXISTS `softwarehut`.`Purchase` ;
 
 CREATE TABLE IF NOT EXISTS `softwarehut`.`Purchase` (
   `Purchase_ID` INT NULL,
-  `PCustomer_ID` INT NOT NULL,
-  `PJob_ID` INT NOT NULL,
+  `Customer` INT NOT NULL,
+  `Job` INT NOT NULL,
   `Changed` TIMESTAMP NOT NULL,
   PRIMARY KEY (`Purchase_ID`),
-  INDEX `Customer_ID_idx` (`PCustomer_ID` ASC),
-  INDEX `Job_ID_idx` (`PJob_ID` ASC),
-  CONSTRAINT `PCustomer_ID`
-    FOREIGN KEY (`PCustomer_ID`)
+  INDEX `Customer_ID_idx` (`Customer` ASC),
+  INDEX `Job_ID_idx` (`Job` ASC),
+  CONSTRAINT `Customer`
+    FOREIGN KEY (`Customer`)
     REFERENCES `softwarehut`.`Customer` (`Customer_ID`)
     ON DELETE CASCADE
     ON UPDATE CASCADE,
-  CONSTRAINT `PJob_ID`
-    FOREIGN KEY (`PJob_ID`)
+  CONSTRAINT `Job`
+    FOREIGN KEY (`Job`)
     REFERENCES `softwarehut`.`Job` (`Job_ID`)
     ON DELETE CASCADE
     ON UPDATE CASCADE)
@@ -85,7 +85,7 @@ DROP TABLE IF EXISTS `softwarehut`.`Enquiry` ;
 
 CREATE TABLE IF NOT EXISTS `softwarehut`.`Enquiry` (
   `Enquiry_ID` INT NULL,
-  `ECustomer_ID` INT NOT NULL,
+  `Customer` INT NOT NULL,
   `ModeOfEnquiry` VARCHAR(45) NULL,
   `TimeOfEnquiry` DATE NULL,
   `CustomerReq` VARCHAR(45) NULL,
@@ -93,9 +93,9 @@ CREATE TABLE IF NOT EXISTS `softwarehut`.`Enquiry` (
   `QuotationRef` VARCHAR(45) NULL,
   `Changed` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`Enquiry_ID`),
-  INDEX `Customer_ID_idx` (`ECustomer_ID` ASC),
+  INDEX `Customer_ID_idx` (`Customer` ASC),
   CONSTRAINT `ECustomer_ID`
-    FOREIGN KEY (`ECustomer_ID`)
+    FOREIGN KEY (`Customer`)
     REFERENCES `softwarehut`.`Customer` (`Customer_ID`)
     ON DELETE CASCADE
     ON UPDATE CASCADE)
@@ -109,13 +109,13 @@ DROP TABLE IF EXISTS `softwarehut`.`Order` ;
 
 CREATE TABLE IF NOT EXISTS `softwarehut`.`Order` (
   `Order_ID` INT NULL,
-  `OCustomer_ID` INT NOT NULL,
+  `Customer` INT NOT NULL,
   `Reviewer` VARCHAR(45) NULL,
   `Changed` TIMESTAMP NOT NULL,
   PRIMARY KEY (`Order_ID`),
-  INDEX `Customer_ID_idx` (`OCustomer_ID` ASC),
+  INDEX `Customer_ID_idx` (`Customer` ASC),
   CONSTRAINT `OCustomer_ID`
-    FOREIGN KEY (`OCustomer_ID`)
+    FOREIGN KEY (`Customer`)
     REFERENCES `softwarehut`.`Customer` (`Customer_ID`)
     ON DELETE CASCADE
     ON UPDATE CASCADE)
@@ -140,4 +140,5 @@ ENGINE = InnoDB;
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
 
