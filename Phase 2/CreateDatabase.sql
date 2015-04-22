@@ -21,11 +21,9 @@ USE `softwarehut` ;
 DROP TABLE IF EXISTS `softwarehut`.`Customer` ;
 
 CREATE TABLE IF NOT EXISTS `softwarehut`.`Customer` (
-  `Customer_ID` INT NULL,
-  `Address` VARCHAR(45) NOT NULL,
-  `City` VARCHAR(45) NOT NULL,
-  `Postcode` VARCHAR(45) NOT NULL,
-  `Changed` TIMESTAMP NOT NULL,
+  `Customer_ID` INT NULL AUTO_INCREMENT,
+  `Address` VARCHAR(255) NOT NULL,
+  `Changed` TIMESTAMP NULL,
   PRIMARY KEY (`Customer_ID`))
 ENGINE = InnoDB;
 
@@ -39,7 +37,7 @@ CREATE TABLE IF NOT EXISTS `softwarehut`.`Job` (
   `Job_ID` INT NULL,
   `Customer` INT NOT NULL,
   `Project_Cost` DECIMAL NULL,
-  `Completed` TINYINT(1) NULL,
+  `Completed` VARCHAR(45) NULL,
   `DueDate` DATE NULL,
   `Changed` TIMESTAMP NOT NULL,
   PRIMARY KEY (`Job_ID`),
@@ -84,37 +82,19 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `softwarehut`.`Enquiry` ;
 
 CREATE TABLE IF NOT EXISTS `softwarehut`.`Enquiry` (
-  `Enquiry_ID` INT NULL,
-  `Customer` INT NOT NULL,
+  `Enquiry_ID` INT NULL AUTO_INCREMENT,
+  `Customer` INT NULL,
   `ModeOfEnquiry` VARCHAR(45) NULL,
   `TimeOfEnquiry` DATE NULL,
-  `CustomerReq` VARCHAR(45) NULL,
-  `DeliveryDate` DATE NULL,
-  `QuotationRef` VARCHAR(45) NULL,
-  `Changed` VARCHAR(45) NOT NULL,
+  `CustomerReqDate` VARCHAR(255) NULL,
+  `QuotationRef` VARCHAR(255) NULL,
+  `Reference` VARCHAR(45) NULL,
+  `CustOrderRef` VARCHAR(45) NULL,
+  `WorkOrdRef` VARCHAR(45) NULL,
+  `WorkStatus` VARCHAR(45) NULL,
   PRIMARY KEY (`Enquiry_ID`),
   INDEX `Customer_ID_idx` (`Customer` ASC),
   CONSTRAINT `ECustomer_ID`
-    FOREIGN KEY (`Customer`)
-    REFERENCES `softwarehut`.`Customer` (`Customer_ID`)
-    ON DELETE CASCADE
-    ON UPDATE CASCADE)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `softwarehut`.`Order`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `softwarehut`.`Order` ;
-
-CREATE TABLE IF NOT EXISTS `softwarehut`.`Order` (
-  `Order_ID` INT NULL,
-  `Customer` INT NOT NULL,
-  `Reviewer` VARCHAR(45) NULL,
-  `Changed` TIMESTAMP NOT NULL,
-  PRIMARY KEY (`Order_ID`),
-  INDEX `Customer_ID_idx` (`Customer` ASC),
-  CONSTRAINT `OCustomer_ID`
     FOREIGN KEY (`Customer`)
     REFERENCES `softwarehut`.`Customer` (`Customer_ID`)
     ON DELETE CASCADE
@@ -140,5 +120,3 @@ ENGINE = InnoDB;
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
-
-

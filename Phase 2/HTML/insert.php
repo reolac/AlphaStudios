@@ -15,13 +15,11 @@ if(isset($_POST['submit']))
 {
 	echo "in thing";
 	
-	$date = $_POST['dateandtime'];
-
 	$query1 = "INSERT INTO customer (Address) VALUES ('$_POST[nameandAddressofEnquiry]')";
-	$query2 = "INSERT INTO enquiry (ModeOfEnquiry, TimeOfEnquiry, CustomerReqDate, QuotationRef, Reference, CustOrderRef) VALUES ('$_POST[modeOfEnquiry]','$_POST[dateandtime]','$_POST[customerRequirementsAndDeliveryDate]','$_POST[quotation]','$_POST[reference]','$_POST[customerOrderReference]')";
-	#$query3 = "INSERT INTO enquiry (TimeOfEnquiry) VALUES ('$_POST[dateandtime]')";
-	#echo $date;
+	$query2 = "INSERT INTO enquiry (Customer) SELECT Customer_ID FROM customer WHERE Address = '$_POST[nameandAddressofEnquiry]' AND WorkOrdRef = '$_POST[workOrderReference]'";
+	$query3 = "INSERT INTO enquiry (ModeOfEnquiry, TimeOfEnquiry, CustomerReqDate, QuotationRef, Reference, CustOrderRef, WorkOrdRef, WorkStatus) VALUES ('$_POST[modeOfEnquiry]','$_POST[dateandtime]','$_POST[customerRequirementsAndDeliveryDate]','$_POST[quotation]','$_POST[reference]','$_POST[customerOrderReference]','$_POST[workOrderReference]','$_POST[workOrderExecution]')";
+	mysqli_query($conn,$query1);
+	mysqli_query($conn,$query3);
 	mysqli_query($conn,$query2);
 	exit();
-	#echo $result;
 }
