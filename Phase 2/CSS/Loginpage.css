@@ -30,6 +30,12 @@ input[type="submit"]
 	
 }
 
+.companyHeader{
+	background: linear-gradient(to bottom, #D3E8F9, white);
+	height: 10%;
+	
+}
+
 img{
 	width: 35%;
 	height: 12%;
