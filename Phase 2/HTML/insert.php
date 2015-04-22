@@ -1,4 +1,5 @@
 <?php
+ob_start();
 $servername = "localhost:3306";
 $username = "root";
 $password = "bill1995";
@@ -13,13 +14,13 @@ if(mysqli_connect_errno())
 }
 if(isset($_POST['submit']))
 {
-	echo "in thing";
-	
 	$query1 = "INSERT INTO customer (Address) VALUES ('$_POST[nameandAddressofEnquiry]')";
-	$query2 = "INSERT INTO enquiry (Customer) SELECT Customer_ID FROM customer WHERE Address = '$_POST[nameandAddressofEnquiry]' AND WorkOrdRef = '$_POST[workOrderReference]'";
-	$query3 = "INSERT INTO enquiry (ModeOfEnquiry, TimeOfEnquiry, CustomerReqDate, QuotationRef, Reference, CustOrderRef, WorkOrdRef, WorkStatus) VALUES ('$_POST[modeOfEnquiry]','$_POST[dateandtime]','$_POST[customerRequirementsAndDeliveryDate]','$_POST[quotation]','$_POST[reference]','$_POST[customerOrderReference]','$_POST[workOrderReference]','$_POST[workOrderExecution]')";
 	mysqli_query($conn,$query1);
+	$result = mysqli_query($conn,"SELECT Customer_ID FROM customer WHERE Address = '$_POST[nameandAddressofEnquiry]'");
+	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+	$custid = $row['Customer_ID'];
+	$query3 = "INSERT INTO enquiry (ModeOfEnquiry, TimeOfEnquiry, CustomerReqDate, QuotationRef, Reference, CustOrderRef, WorkOrdRef, WorkStatus, Customer) VALUES ('$_POST[modeOfEnquiry]','$_POST[dateandtime]','$_POST[customerRequirementsAndDeliveryDate]','$_POST[quotation]','$_POST[reference]','$_POST[customerOrderReference]','$_POST[workOrderReference]','$_POST[workOrderExecution]','$custid')";
 	mysqli_query($conn,$query3);
-	mysqli_query($conn,$query2);
+	header('Location: cHome.html');
 	exit();
 }
