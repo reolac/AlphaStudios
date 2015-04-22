@@ -7,19 +7,19 @@ img{
 	font-family: "Times New Roman";
 }
 
-.colorOne {
+/*.colorOne {
 	border: 1px solid;
 }
 
 .colorTwo {
 	border: 1px solid;
 	border-color: grey;	
-}
+}*/
 
 .content {
 	position: fixed;
-	margin: 10% 0 0 35%;
-	width: 30%;
+	margin: 10% 0 0 30%;
+	width: 40%;
 	border: 2px solid;
 	padding-bottom: 10px;
 	padding-left: 10px;	
@@ -27,11 +27,11 @@ img{
 }
 
 .content table {
-	margin: 0 0 0 5%;
+	margin: 0 2% 0 0;
 }
 
 .content h1{
-	margin: 5% 0 5% 0;
+	margin: 5% 3% 5% 0;
 }
 
 #container {
@@ -50,13 +50,15 @@ img{
 
 .createButton{
 	padding: 1% 4% 1% 4%;
-    background: #AAACF0;
+    background: blue;
+	color: white;
 	font-weight: bolder;
-	border: 2px solid;
-	box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.75);
-	margin: 40% 0 0 44%;
+	border-style: none;
+	margin: 42% 0 0 44%;
 	position: fixed;
-
+	border-radius: 10px;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-size: 14pt;
 }
 
 body {
@@ -65,7 +67,16 @@ body {
 	
 tr, td, th{
 	border: 1px solid;
+	width: 65%;
+	
 }
+
+
+input[type="text"]
+{
+	width: auto;
+}
+
 
 table {
     border-collapse: collapse;
