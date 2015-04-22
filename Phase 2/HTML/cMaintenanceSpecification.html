@@ -4,48 +4,38 @@
     <head>
         <meta charset="UTF-8">
         <title>Create Maintenance Specification</title>
-        <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <link rel="stylesheet" type="text/css" href="../css/maintenance.css">
+		<link rel="stylesheet" type="text/css" href="../css/style.css">
     </head>
 
     <body>
+	
+	<div id="container">
+		<p><span class="gap">GAP</span> <span class="electrical">Electrical and
+		Mechanical Services Ltd</span></p>
+	</div>
+	<h1 class="subTitle">Maintenance Specification</h1>
+	
+	<table id="maintenance">
+		<tr>
+			<th>Observations:</th>
 
-        <h2 class="title">GAP ELECTRICAL</h2>
+			<th>Functional Faults:</th>
 
-        <div class="content">
+			<th>Suggestions / Feedback on asset or maintenance task:</th>
 
-            <h1 class="title">New Maintenance Specification</h1>
+			<th>Action Taken:</th>
+		</tr>
 
-            <table>
-                <tr>
-                    <th>Attribute</th>
-                    <th>Input</th> 
-                </tr>
-
-                <tr>
-                    <td>Observations</td>
-                    <td><input type="text" name="observations" id="observations" class="colorOne"></td>
-                </tr>
-
-                <tr>
-                    <td>Functional Faults</td>
-                    <td><input type="text" name="functionalFaults" id="functionalFaults" class="colorTwo"></td>
-                </tr>
-
-                <tr>
-                    <td>Feedback</td>
-                    <td><input type="text" name="feedback" id="feedback" class="colorOne"></td>
-                </tr>
-
-                <tr>
-                    <td>Action Taken</td>
-                    <td><input type="text" name="actionTaken" id="actionTaken" class="colorTwo"></td>
-                </tr>
-
-            </table>
-
-        </div>
-
-        <button type="button" id="sendMaintenanceSpecification" class="createButton">Create</button>
-
-    </body>
+		<tr>
+			<td><input id="observations" name="observations" type="text"></td>
+			<td><input id="functionalFaults" name="functionalFaults" type=
+			"text"></td>
+			<td><input id="suggestions" name="suggestions" type="text"></td>
+			<td><input id="actionTaken" name="actionTaken" type="text"></td>
+		</tr>
+	</table>
+	
+	<input class="createButton" id="button" type="submit" name="submit" value="Create">
+</body>
 </html>
