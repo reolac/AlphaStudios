@@ -1,6 +1,6 @@
 	#maintenance {
 	font-family: "Times New Roman", Arial, Helvetica, sans-serif;
-	width: 100%;
+	width: 90%;
 	border-collapse: collapse;
 	}
 
@@ -17,9 +17,17 @@
     padding-bottom: 4px;
     background-color: white;
     color: black;
+	width: 10%;
 }
 
 	#maintenance tr.alt td {
 	color: #000000;
 	background-color: #EAF2D3;
 	}
+	
+input[type="text"]
+{
+	width: 98%;
+}
+	
+	

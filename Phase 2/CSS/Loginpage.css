@@ -30,9 +30,10 @@ input[type="submit"]
 	border-style: none;
 	font-family: Helvetica;
 	padding: 3% 4% 3% 4%;
-	margin: 8% 0 0 38%;
+	margin: 8% 0 0 37%;
 	text-decoration: none;
 	font-weight: bold;
+	border-radius: 16px;
 	
 }
 
@@ -51,9 +52,26 @@ img{
 }
 
 .usernameBox{
-	margin: 0 0 0 5%;
+	margin: 0 0 0 0;
+	width: 95%;
+	border: 1px solid;
+	border-color: #c4c4c4 #d1d1d1 #d4d4d4;
+	border-radius: 2px;
+	outline: 5px solid #eff4f7;
+	text-align: center;
 }
 
 .passwordBox{
-	margin: 0 0 0 6.2%;
+	margin: 5% 0 0 0;
+	width: 95%;
+	border: 1px solid;
+	border-color: #c4c4c4 #d1d1d1 #d4d4d4;
+	border-radius: 2px;
+	outline: 5px solid #eff4f7;
+	text-align: center;
+
+}
+
+#button{
+	margin: 10% 0 0 34%;
 }
