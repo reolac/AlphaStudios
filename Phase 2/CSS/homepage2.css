@@ -1,160 +1,78 @@
-.costForm {
-	margin-left: 10%;
-	margin-right: 15%;
-
-	padding-bottom: 10px;
-
+.allTablesButton{
+    position: fixed;
+    width: auto;
+    height: auto;
+    text-decoration: none;
+    background-color: red;
+    color: white;
+    font-size: 20pt;
+    padding: 5% 5% 5% 5%;
+    margin: 0 0 0 0;
+    text-align: center;
+    font-family: Verdana, Geneva, sans-serif;
 }
 
-.fontTh {
-	font-family: "Times New Roman";
+.dataInsertion{
+    position: fixed;
+    width: auto;
+    height: auto;
+    text-decoration: none;
+    background-color: blue;
+    color: white;
+    font-size: 20pt;
+    padding: 5% 5% 5% 5%;
+    margin: 0 0 0 30%;
+    text-align: center;
+    font-family: Verdana, Geneva, sans-serif;
 }
 
-.colorOne {
-	border: 1px solid;
+.adminAccess{
+		
+    position: fixed;
+    width: auto;
+    height: auto;
+    text-decoration: none;
+    background-color: green;
+    color: white;
+    font-size: 20pt;
+    padding: 5% 5% 5% 5%;
+    margin: 0 0 0 60%;
+    text-align: center;
+    font-family: Verdana, Geneva, sans-serif;
 }
 
-.colorTwo {
-	border: 1px solid;
-	border-color: grey;	
+.checkList {
+		position: fixed;
+		width: auto;
+		height: auto;
+    text-decoration: none;
+		background-color: black;
+    color: white;
+    font-size: 20pt;
+    padding: 5% 5% 5% 5%;
+    margin: 18% 0 0 2%;
+    text-align: center;
+    font-family: Verdana, Geneva, sans-serif;
 }
 
-.content {
-	margin-top: 10%;
-	margin-left: auto;
-	margin-right: auto;
-	width: 30%;
-	border: 2px solid;
-	padding-bottom: 10px;
-
-}
-
-
-.gap {
-	font-family: "Arial",Helvetica, sans-serif;
-	font-size: 24px;
-	color: blue;
-}
-.electrical {
-	font-family: "Arial",Helvetica, sans-serif;
-	font-size: 24px;
-	color: red;
-	}
-
-#container {
-	text-align: center; 
-}
-
-.subTitle {
-	text-align: center;
-	font-family: "Trebuchet MS", Helvetica, sans-serif;
-}
-
-.logo{
-	position: fixed;
-	margin: -10% 0 0 30%;
-	height: 100px;
-	width: 500px;
-	font-family: "Times New Roman";
-	font-size: 24px;
-	font-weight: bold;
-}
-
-.createButton{
-	padding: 10px 15px;
-    background: #AAACF0;
-	margin-left: auto;
-	margin-right: auto;
-	font-weight: bolder;
-	border: 2px solid;
-	box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.75);
-	margin-top: 10px;
-	margin-left: 47%;
-
-}
-
-.loginButton{
-	padding: 10px 15px;
-    background: white;
-	margin-left: auto;
-	margin-right: auto;
-	font-weight: bolder;
-	border: 2px solid;
-	box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.75);
-	margin-top: 10px;
-	margin-left: 47%;
-
-}
-
-.navBar{
-	width: 800px;
-	margin-left: auto;
-	margin-right: auto;
-	height: 50px;
-}
-
-
-allTablesButton, dataInsertion, adminAccess{
-    display: block;
-    width: 20%;
-}
-	
-tr, td, th{
-	border: 1px solid;
+.maintenanceSpec{
+		position: fixed;
+		width: auto;
+		height: auto;
+    text-decoration: none;
+		background-color: purple;
+    color: white;
+    font-size: 20pt;
+    padding: 5% 5% 5% 5%;
+    margin: 18% 0 0 29.5%;
+    text-align: center;
+    font-family: Verdana, Geneva, sans-serif;
 }
 
 ul{
-    list-style-type: none;
-    text-decoration: none;
-    padding: 0;
+	 list-style-type: none;
+	 margin: 15% 0 0 0;
 }
-
-table {
-    border-collapse: collapse;
-}
-
-a {
-    display: block;
-    width: 90px;
-    float: left;
-}
-
-*:focus {
-    outline: 0;
-}
-
-textarea:focus, input:focus{
-    outline: 0;
-}
-
-#enquiry{
-    font-family: "Times New Roman", Arial, Helvetica, sans-serif;
-    width: 100%;
-    border-collapse: collapse;
-}
-
-#enquiry td, #enquiry th {
-    font-size: 13px;
-    border: 1px solid black;
-    padding: 3px 7px 2px 7px;
-}
-
-#enquiry th {
-    font-size: 14px;
-    text-align: left;
-    padding-top: 5px;
-    padding-bottom: 4px;
-    background-color: white;
-    color: black;
-}
-
-#enquiry tr.alt td {
-    color: #000000;
-    background-color: #EAF2D3;
-}
-
-
-.table col:nth-child(1){width:10px;}
 
 
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
@@ -265,19 +183,6 @@ textarea:focus, input:focus{
   -moz-box-shadow: inset 0 5px 10px #133e40;
   -webkit-box-shadow: inset 0 5px 10px #133e40;
   box-shadow: inset 0 5px 10px #133e40;
-}
-
-progress{
-	width: 100%;
-	height: 20px;
-}
-
-.progressText{
-	position: relative;
-    top: 1.20em;
-    margin-left: 17%;
-    word-spacing: 25px;
-    
 }
 
 html{
