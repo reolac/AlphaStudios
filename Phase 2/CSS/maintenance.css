@@ -8,6 +8,7 @@
 	font-size: 1em;
 	border: 1px solid #000000;
 	padding: 3px 7px 2px 7px;
+
 	}
 
 	#maintenance th {
@@ -19,6 +20,7 @@
     background-color: white;
     color: black;
 	width: 10%;
+
 }
 
 	#maintenance tr.alt td {
