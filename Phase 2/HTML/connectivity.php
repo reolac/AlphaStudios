@@ -20,11 +20,14 @@ if(isset($_POST['submit']))
 {
 	if(!empty($_POST['u']))
 	{
-		$result = mysqli_query($conn,"SELECT * FROM login where user = '$_POST[u]' AND hashedpass = '$_POST[p]'") or die(mysql_error());
+		$result = mysqli_query($conn,"SELECT * FROM login where user = '$_POST[u]' LIMIT 1") or die(mysql_error());
 		$row = mysqli_fetch_array($result, MYSQLI_ASSOC) or die(mysql_error());
-		if(!empty($row['user']) AND !empty($row['hashedpass']))
+		if(!empty($row['hash']))
 		{	
-			header('Location: cHome.html');
+			if($row['hash']==crypt($_POST['p'],$row['hash']))
+			{
+				header('Location: cHome.html');	
+			}
 		}
 		else
 		{
