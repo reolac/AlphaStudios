@@ -46,6 +46,7 @@ img{
 .subTitle {
 	text-align: center;
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	margin: 0% 0 0 20%;
 }
 
 .createButton{
@@ -62,7 +63,7 @@ img{
 }
 
 body {
-	background-color: white;
+
 	}
 	
 tr, td, th{

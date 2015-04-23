@@ -48,6 +48,7 @@
 .subTitle {
 	text-align: center;
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	margin: 0 0 0 20%;
 }
 
 .logo{
@@ -88,7 +89,7 @@
 
 .navBar{
 	width: 800px;
-	margin-left: auto;
+	margin-left: 39%;
 	margin-right: auto;
 	height: 50px;
 }
