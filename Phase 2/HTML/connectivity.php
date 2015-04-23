@@ -1,4 +1,9 @@
 <?php
+# to do
+# if/else login statement
+# actual authentication 
+# hiding password/hashing
+ob_start();
 $servername = "localhost:3306";
 $username = "root";
 $password = "bill1995";
@@ -10,6 +15,7 @@ if(mysqli_connect_errno())
 	printf("connection failed :%s\n", mysqli_connect_error());
 	exit();
 }
+
 if(isset($_POST['submit']))
 {
 	if(!empty($_POST['u']))
@@ -17,12 +23,12 @@ if(isset($_POST['submit']))
 		$result = mysqli_query($conn,"SELECT * FROM login where user = '$_POST[u]' AND hashedpass = '$_POST[p]'") or die(mysql_error());
 		$row = mysqli_fetch_array($result, MYSQLI_ASSOC) or die(mysql_error());
 		if(!empty($row['user']) AND !empty($row['hashedpass']))
-		{
-			echo "SUCCESSFULLY LOGIN TO USER";
+		{	
+			header('Location: cHome.html');
 		}
 		else
 		{
-			echo "login failed\n";
+			header('Location: login.html');
 		}
 	}
 }
