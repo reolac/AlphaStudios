@@ -131,21 +131,23 @@ textarea:focus, input:focus{
     font-family: "Times New Roman", Arial, Helvetica, sans-serif;
     width: 100%;
     border-collapse: collapse;
+    margin: 0 0 0 -0.5%;
 }
 
 #enquiry td, #enquiry th {
-    font-size: 13px;
     border: 1px solid black;
-    padding: 3px 7px 2px 7px;
+    padding: 3px 0px 2px 0px;
 }
 
 #enquiry th {
-    font-size: 14px;
-    text-align: left;
+    font-size: 10pt;
+    text-align: center;
     padding-top: 5px;
-    padding-bottom: 4px;
+    padding-bottom: 1px;
+    padding-right: 5px;
     background-color: white;
     color: black;
+
 }
 
 #enquiry tr.alt td {
