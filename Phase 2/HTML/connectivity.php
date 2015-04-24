@@ -15,16 +15,21 @@ if(mysqli_connect_errno())
 	printf("connection failed :%s\n", mysqli_connect_error());
 	exit();
 }
-
 if(isset($_POST['submit']))
 {
 	if(!empty($_POST['u']))
 	{
-		$result = mysqli_query($conn,"SELECT * FROM login where user = '$_POST[u]' LIMIT 1") or die(mysql_error());
-		$row = mysqli_fetch_array($result, MYSQLI_ASSOC) or die(mysql_error());
-		if(!empty($row['hash']))
+		if($stmt = mysqli_prepare($conn, "SELECT hash FROM login WHERE user = ? LIMIT 1"))
+		{
+			$user = $_POST['u'];
+			mysqli_stmt_bind_param($stmt , 's',$user);
+			mysqli_stmt_execute($stmt);
+			mysqli_stmt_bind_result($stmt, $hash);
+			mysqli_stmt_fetch($stmt);
+		}
+		if(!empty($hash))
 		{	
-			if($row['hash']==crypt($_POST['p'],$row['hash']))
+			if($hash==crypt($_POST['p'],$hash))
 			{
 				header('Location: cHome.html');	
 			}
