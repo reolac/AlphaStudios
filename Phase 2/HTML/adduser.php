@@ -19,7 +19,12 @@ if(isset($_POST['submit']))
 		$salt = strtr(base64_encode(mcrypt_create_iv(16,MCRYPT_DEV_URANDOM)), '+', '.');
 		$salt = sprintf("$2a$%02d$", $cost) . $salt;
 		$hash = crypt($_POST['p'], $salt);
-		mysqli_query($conn,"INSERT INTO login (user, hash) VALUES ('$_POST[u]','$hash')");
+		$user = $_POST['u'];
+		if($stmt = mysqli_prepare($conn, "INSERT INTO login (user , hash) VALUES (?,?)"))
+		{
+			mysqli_stmt_bind_param($stmt , 'ss',$user, $hash);
+			mysqli_stmt_execute($stmt);
+		}
 	}
 }
 ?>
