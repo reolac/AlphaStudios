@@ -24,6 +24,7 @@ if(isset($_POST['submit']))
 		{
 			mysqli_stmt_bind_param($stmt , 'ss',$user, $hash);
 			mysqli_stmt_execute($stmt);
+			mysqli_stmt_close($stmt);
 		}
 	}
 }

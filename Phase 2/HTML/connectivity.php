@@ -26,6 +26,7 @@ if(isset($_POST['submit']))
 			mysqli_stmt_execute($stmt);
 			mysqli_stmt_bind_result($stmt, $hash);
 			mysqli_stmt_fetch($stmt);
+			mysqli_stmt_close($stmt);
 		}
 		if(!empty($hash))
 		{	
