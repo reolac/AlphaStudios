@@ -1,31 +1,34 @@
-<?php
-$servername = "localhost:3306";
-$username = "root";
-$password = "bill1995";
-$dbname = "softwarehut";
-
-$conn = mysqli_connect($servername,$username,$password,$dbname);
-if(mysqli_connect_errno())
-{
-	printf("connection failed :%s\n", mysqli_connect_error());
-	exit();
-}
-if(isset($_POST['submit']))
-{
-	if($_POST['p'] === $_POST['p2'])
-	{
-		echo "pass same";
-		$cost = 10;
-		$salt = strtr(base64_encode(mcrypt_create_iv(16,MCRYPT_DEV_URANDOM)), '+', '.');
-		$salt = sprintf("$2a$%02d$", $cost) . $salt;
-		$hash = crypt($_POST['p'], $salt);
-		$user = $_POST['u'];
-		if($stmt = mysqli_prepare($conn, "INSERT INTO login (user , hash) VALUES (?,?)"))
-		{
-			mysqli_stmt_bind_param($stmt , 'ss',$user, $hash);
-			mysqli_stmt_execute($stmt);
-			mysqli_stmt_close($stmt);
-		}
-	}
-}
-?>
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Add User</title>
+		<link rel="stylesheet" type="text/css" href="../css/Loginpage.css">
+	</head>
+	<?php 
+    ob_start();
+    session_start();
+    if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) 
+    {
+      #user logged in
+    }
+    else 
+    {
+      #header('Location: login.html');
+    }?>
+	<body>
+		<div class="companyHeader">
+			<img src="../img/GELogo.jpg"> 
+		</div>
+		
+		<div id="loginMain">
+			<h1>Add User</h1>
+			<form id="loginDetails" method="POST" action="add.php">
+				<input class="usernameBox" type="text" name="u" placeholder="Username"><br>
+				<input class="passwordBox" type="password" name="p" placeholder="Password"><br>
+				<input class="passwordBox" type="password" name="p2" placeholder="Re-Enter Password"><br>
+				<input id="button" type="submit" name="submit" value="Add User">
+			</form>
+		</div>
+	</body>
+</html> 

@@ -5,6 +5,17 @@
         <title>Create Check List</title>
         <link rel="stylesheet" type="text/css" href="../css/checkList.css">
     </head>
+    <?php 
+    ob_start();
+    session_start();
+    if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) 
+    {
+      #user logged in
+    }
+    else 
+    {
+      #header('Location: login.html');
+    }?>
     <body>
 		<div id= "container">
 			<img src="../img/GELogo.jpg"> 
