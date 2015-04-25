@@ -46,7 +46,7 @@
 
                     <tr>
                         <td class="fontTh"> Job Sheet </td>
-                        <td><?php session_start(); $WOR = $_SESSION['WoR']; echo"<input type='text' name='jobSheet' id='jobSheet' class='colorTwo' value='$WOR'>"?></td>
+                        <td><?php $WOR = $_SESSION['WoR']; echo"<input type='text' name='jobSheet' id='jobSheet' class='colorTwo' value='$WOR'>"?></td>
                     </tr>
                     <tr>
                         <td class="fontTh"> Purchase Order Number </td>
