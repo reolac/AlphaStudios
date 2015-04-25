@@ -2,6 +2,7 @@
 	font-family: "Times New Roman", Arial, Helvetica, sans-serif;
 	width: 90%;
 	border-collapse: collapse;
+	margin: 0 0 5% 5%;
 	}
 
 	#maintenance td, #maintenance th {
