@@ -5,6 +5,7 @@
         <meta charset="UTF-8">
         <title>Create Costing Cheet</title>
         <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <script language="javascript" type"text/javascript" src="../js/script.js"></script>
     </head>
 
     <body>
@@ -18,18 +19,21 @@
 
         <div class="costForm">
 
-            <div>Customer:</div>
-            <div>Site:</div>
-            <div>Job:</div>
-            <div>Date:</div>
-            <div>Ref:</div>
-            <div>W.O.N:</div>
+            <div>Customer: <input type="text" name="costingSheet" id="costingSheet"/></div>
+            <div>Site: <input type="text" name="costingSheet" id="costingSheet"/></div>
+            <div>Job: <input type="text" name="costingSheet" id="costingSheet"/></div>
+            <div>Date: <input type="text" name="costingSheet" id="costingSheet"/></div>
+            <div>Ref: <input type="text" name="costingSheet" id="costingSheet"/></div>
+            <div>W.O.N: <input type="text" name="costingSheet" id="costingSheet"/></div>
+
+             
+            <td><input type="button" id="addmorePOIbutton" value="Add More POIs" onclick="addRow('servicesTable')"/></td>
 
             <table>
                 <tr>
                     <th>Ref</th>
                     <th>Item Description</th>
-                    <th colspan='4'>Materials</th>
+                    <th colspan='3'>Materials</th>
 
                 </tr>
 
@@ -37,25 +41,29 @@
                     <td></td>
                     <td></td>
                     <th>No. reqd</th>
-                    <th>Length</th>
+                    
                     <th>Unit Cost</th>
                     <th>Total Cost</th>
                 </tr>
 
                 <tr>
+                    <td><input type="button" id="delPOIbutton" value="Add Row" onclick="addRow('materialsTable')"/></td>
+                    <td colspan="3">Supplier: <input type="text" name="costingSheet" id="costingSheet"/></td>
                     <td></td>
-                    <td colspan="5">Supplier: <input type="text" name="costingSheet" id="costingSheet"/></td>
                 </tr>
-
+            </table>
+<table id="materialsTable">
                 <tr>
-                    <td><input type="text" name="costingSheet" id="costingSheet"/></td>
-                    <td><input type="text" name="costingSheet" id="costingSheet"/></td>
-                    <td><input type="text" name="costingSheet" id="costingSheet"/></td>
-                    <td><input type="text" name="costingSheet" id="costingSheet"/></td>
-                    <td><input type="text" name="costingSheet" id="costingSheet"/></td>
-                    <td><input type="text" name="costingSheet" id="costingSheet"/></td>
+                    <td>0</td>
+                    <td><input type="text" name="costingSheet" id="materialsTableDesc0" onInput="getTotal('materialsTable')"/></td>
+                    <td><input type="text" name="costingSheet" id="materialsTableReqd0"/></td>
+                    <td><input type="text" name="costingSheet" id="materialsTableUCost0"/></td>
+                    <td>£0</td>
                 </tr>
+            </table>
 
+            
+            <table>
                 <tr>
                     <td></td>
                     <td colspan="4"><b>TOTAL MATERIALS<b></td>
@@ -90,19 +98,24 @@
                 </tr>
 
                 <tr>
+                    <td><input type="button" id="delPOIbutton" value="Add Row" onclick="addRow('servicesTable')"/></td>
+                    <td colspan="4">Contractor Name: <input type="text" name="costingSheet" id="costingSheet"/></td>
                     <td></td>
-                    <td colspan="6">Contractor Name: <input type="text" name="costingSheet" id="costingSheet"/></td>
                 </tr>
+            </table>
+            <table id="servicesTable">
+                <tr >
+                    <td>0</td>
+                    <td><input type="text" name="costingSheet" id="costingSheet"/></td>
+                    <td><input type="text" name="costingSheet" id="costingSheet"/></td>
+                    <td><input type="text" name="costingSheet" id="costingSheet"/></td>
+                    <td><input type="text" name="costingSheet" id="costingSheet"/></td>
+                    <td><input type="text" name="costingSheet" id="costingSheet"/></td>
+                </tr> 
+                </table> 
 
-                <tr>
-                    <td><input type="text" name="costingSheet" id="costingSheet"/></td>
-                    <td><input type="text" name="costingSheet" id="costingSheet"/></td>
-                    <td><input type="text" name="costingSheet" id="costingSheet"/></td>
-                    <td><input type="text" name="costingSheet" id="costingSheet"/></td>
-                    <td><input type="text" name="costingSheet" id="costingSheet"/></td>
-                    <td><input type="text" name="costingSheet" id="costingSheet"/></td>
-                </tr>                
-
+                              
+                <table>
                 <tr>
                     <td></td>
                     <td colspan="4">Total Outside Services Costs plus 15%</td>
@@ -147,29 +160,32 @@
                 <tr>
                     <td></td>
                     <td colspan="4"><b>TOTAL SUB-CONTRACT LABOUR COSTS<b></td>
-                    <td>0</td>
+                    <td></td>
                 </tr>
 
                 <tr>
-                    <td></td>
+                    <td><input type="button" id="delPOIbutton" value="Add Row" onclick="addRow('labourTable')"/></td>
                     <td colspan="2"><b>LABOUR</b></td>
                     
                     <td>Hrs</td>
                     <td>Rate</td>
                     <td>Total</td>
                 </tr>
-
+            </table>
+                <table id="labourTable">
                 <tr>
-                    <td><input type="text" name="costingSheet" id="costingSheet"/></td>
+                    <td>0</td>
                     <td><input type="text" name="costingSheet" id="costingSheet"/></td>
                     <td><input type="text" name="costingSheet" id="costingSheet"/></td>
                     <td><input type="text" name="costingSheet" id="costingSheet"/></td>
                     <td><input type="text" name="costingSheet" id="costingSheet"/></td>
                     <td><input type="text" name="costingSheet" id="costingSheet"/></td>
                 </tr>  
+            </table>
+            <table>
 
                 <tr>
-                    <td></td>
+                    <td><input type="text" name="costingSheet" id="costingSheet"/></td>
                     <td colspan="4"><b>TOTAL LABOUR<b></td>
                     <td>0</td>
                 </tr>
@@ -200,5 +216,6 @@
 
         <button type="button" id="sendCheckList" class="createButton">Create</button>
     
+
     </body>
 </html>
