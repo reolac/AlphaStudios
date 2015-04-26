@@ -28,6 +28,16 @@
 				<th>Work Order Execution Status</th>
 			</tr>
 			<?php
+			ob_start();
+		    session_start();
+		    if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) 
+		    {
+		      #user logged in
+		    }
+		    else 
+		    {
+		      #header('Location: login.html');
+		    }
 			$servername = "localhost:3306";
 			$username = "root";
 			$password = "bill1995";
@@ -52,7 +62,7 @@
 				<td><?php echo $row['QuotationRef']?></td>
 				<td><?php echo $row['CustOrderRef']?></td>
 				<td><?php echo $row['QuoteReview']?></td>
-				<td><?php echo $row['WorkOrdRef']?></td>
+				<td><?php echo "<a href=redirect.php?clickedcell=$row[WorkOrdRef]>$row[WorkOrdRef]</a>"?></td>
 				<td><?php echo $row['WorkStatus']?></td>
 			</tr>
 			<?php
