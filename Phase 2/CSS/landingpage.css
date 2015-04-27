@@ -1,3 +1,13 @@
+button{
+  margin-left: 10%;
+  margin-top: 7%;
+  width: 20em;  height: 2em;
+  background: #AAACF0;
+  font-weight: bolder;
+  border: 2px solid;
+  box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.75);
+}
+
 .allTablesButton{
     position: fixed;
     width: auto;
