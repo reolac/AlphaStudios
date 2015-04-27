@@ -15,7 +15,9 @@ img{
 	border: 1px solid;
 	border-color: grey;	
 }*/
-
+.title{
+	margin-left: 42%;
+}
 .content {
 	position: fixed;
 	margin: 10% 0 0 30%;
