@@ -4,11 +4,15 @@ function addRow(tableID){
 	var row = table.insertRow(-1);
 
 	var cell1 = row.insertCell(0);
-	cell1.innerHTML = len;
-	cell1.id += tableID + "Ref" + len;
-	cell1.className = "coll1"
-	cell1.name += tableID + "Ref" + len;
+	var element1 = document.createElement('input');
+	cell1.className = "no";
+	element1.type="text";
+	element1.id=tableID + "Ref" + len;
+	element1.name += tableID + "Ref" + len;
+	element1.value = len;
 
+	element1.disabled = "disabled";
+	cell1.appendChild(element1);
 
 	var cell2 = row.insertCell(1);
 	cell2.className = "iDesc";
@@ -24,7 +28,12 @@ function addRow(tableID){
 	element3.type="text";
 	element3.id = tableID + "Reqd" + len;
 	element3.name += tableID + "Reqd" + len;
- 	element3.onkeyup=function() {calc(tableID, len); totalIt(tableID); totalPer(tableID); totalCost(tableID)}
+ 	element3.onkeyup=function() {
+ 		calc(tableID, len); 
+ 		totalIt(tableID); 
+ 		totalPer(tableID); 
+ 		totalCost(tableID)
+ 	}
 	cell3.appendChild(element3);
 
 	var cell4 = row.insertCell(3);
@@ -35,7 +44,12 @@ function addRow(tableID){
 	element4.value="0.00";
 	element4.id = tableID + "UCost" + len;
 	element4.name = tableID + "UCost" + len;
-	element4.onkeyup=function() {calc(tableID, len); totalIt(tableID); totalPer(tableID); totalCost(tableID)}
+	element4.onkeyup=function() {
+		calc(tableID, len); 
+		totalIt(tableID); 
+		totalPer(tableID); 
+		totalCost(tableID)
+	}
 	cell4.appendChild(element4);
 
 	var cell5 = row.insertCell(4);
@@ -59,9 +73,10 @@ function calc(tableID, idx) {
 }
 
 function totalIt(tableID) {
-    var qtys = document.getElementsByName('total[]');
+	var table = document.getElementById(tableID);
+	var len = table.rows.length;
 	var total = 0;
-	for (var i = 0; i < qtys.length; i++) {
+	for (var i = 0; i < len; i++) {
 		calc(tableID, i);
 		 var price = parseFloat(document.getElementById(tableID+"TCost"+i).value);
 		total += isNaN(price)?0:price;
@@ -70,18 +85,19 @@ function totalIt(tableID) {
 } 
 
 function totalPer(tableID) {
-    var qtys = document.getElementsByName('total[]');
+	var table = document.getElementById(tableID);
+	var len = table.rows.length;
 	var total = 0;
-	for (var i = 0; i < qtys.length; i++) {
+	for (var i = 0; i < len; i++) {
 		calc(tableID, i);
 		 var price = parseFloat(document.getElementById(tableID+"TCost"+i).value) * 1.15;
 		total += isNaN(price)?0:price;
 	};
-	document.getElementById(tableID + "TCostPer").value= (isNaN(total)?"0.00":total.toFixed(2));                        
+	document.getElementById(tableID + "TCostPer").value= (isNaN(total)?"0.00":total.toFixed(2));
+	document.getElementById(tableID + "Total").value= (isNaN(total)?"0.00":total.toFixed(2));                        
 }
 
 function totalCost(tableID) {
-    var qtys = document.getElementsByName('total[]');
 	var total = 0;
 	var price = parseFloat(document.getElementById(tableID+"TCostPer").value)+
 	 			parseFloat(document.getElementById(tableID+"Carriage").value);
