@@ -7,12 +7,15 @@ function addRow(tableID){
 	cell1.innerHTML = len;
 	cell1.id += tableID + "Ref" + len;
 	cell1.className = "coll1"
+	cell1.name += tableID + "Ref" + len;
+
 
 	var cell2 = row.insertCell(1);
 	cell2.className = "iDesc";
 	var element2 = document.createElement('input');
 	element2.type="text";
 	element2.id=tableID + "Desc" + len;
+	element2.name += tableID + "Desc" + len;
 	cell2.appendChild(element2);
 
 	var cell3 = row.insertCell(2);
@@ -20,15 +23,18 @@ function addRow(tableID){
 	var element3 = document.createElement('input');
 	element3.type="text";
 	element3.id = tableID + "Reqd" + len;
-	element3.onkeyup=function() {calc(tableID, len); totalIt(tableID); totalPer(tableID); totalCost(tableID)}
+	element3.name += tableID + "Reqd" + len;
+ 	element3.onkeyup=function() {calc(tableID, len); totalIt(tableID); totalPer(tableID); totalCost(tableID)}
 	cell3.appendChild(element3);
 
 	var cell4 = row.insertCell(3);
 	cell4.className = "no";
+	cell4.innerHTML = '£';
 	var element4 = document.createElement('input');
 	element4.type="text";
 	element4.value="0.00";
 	element4.id = tableID + "UCost" + len;
+	element4.name = tableID + "UCost" + len;
 	element4.onkeyup=function() {calc(tableID, len); totalIt(tableID); totalPer(tableID); totalCost(tableID)}
 	cell4.appendChild(element4);
 
@@ -38,9 +44,10 @@ function addRow(tableID){
 	var element5 = document.createElement('input');
 	element5.type="text";
 	element5.id = tableID + "TCost" + len;
-	element5.disabled = "disabled";
+	element5.name = tableID + "TCost" + len;
+	element5.disabled = "disabled"; 
 	element5.value = "0.00"
-	element5.name = "total[]"
+	element5.name = tableID + "TCost" + len;
 	cell5.appendChild(element5);
 }	
 
