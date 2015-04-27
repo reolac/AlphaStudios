@@ -1,10 +1,11 @@
 #loginMain h1{
-	margin-left: 30%;
-	margin-bottom: 25%;
+	margin-left: 35%;
+
 	margin-top: -35%;
 }
 
 #loginMain input{
+
 	margin-left: -50%;
 
 }
@@ -15,15 +16,25 @@
 }
 
 #loginMain {
-	margin-top: 20%;
-	margin-left: 30%;
+	margin-top: 7%;
+	margin-left: 34%;
 	width: 20%;
 	padding-bottom: 10px;
 	padding-left: 10px;	
-	position: fixed;
+
 }
 
+button{
+  margin-left: 36%;
+  margin-top: 10%;
+  width: 20em;  height: 2em;
+  background: #AAACF0;
+  font-weight: bolder;
+  border: 2px solid;
+  box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.75);
 
+
+}
 
 body{
 	/*background: linear-gradient(to bottom, #D3E8F9, white);
@@ -36,15 +47,11 @@ body{
 	font-family: Helvetica;
 }
 
-h1{
-	text-align: center;
-	font-family: Helvetica;
-}
 
 
 
 .companyHeader{
-	position: fixed;
+
 	background: linear-gradient(to bottom, #D3E8F9, white);
 	z-index: 10;
 	width: 110%;

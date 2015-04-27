@@ -11,7 +11,7 @@
 
 
 .content {
-	margin-top: 10%;
+	margin-top: 3%;
 	margin-left: auto;
 	margin-right: auto;
 	width: 30%;
@@ -37,22 +37,13 @@
 
 .createButton{
 	padding: 10px 15px;
-    background: #AAACF0;
+  background: #AAACF0;
 	font-weight: bolder;
 	border: 2px solid;
+  width: 20em;  height: 2em;
 	box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.75);
 	margin-top: 20px;
 	margin-left: 40%;
-
-}
-
-.logoutButton{
-	padding: 10px 15px;
-    background: #AAACF0;
-	font-weight: bolder;
-	border: 2px solid;
-	box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.75);
-	margin-left: 50%;
 
 }
 

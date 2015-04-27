@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <title>Create Check List</title>
         <link rel="stylesheet" type="text/css" href="../css/checkList.css">
+         <link rel="stylesheet" type="text/css" href="../css/style.css">
     </head>
     <?php 
     ob_start();
@@ -20,16 +21,16 @@
 		<div id= "container">
 			<img src="../img/GELogo.jpg"> 
 		</div>
-    <div id='cssmenu'>
-        <ul>
-            <li class='active'><a href='#'><span>Create</span></a></li>
-            <li><a href='#'><span>View</span></a></li>
-            <li class='last'><a href='#'><span>Logout</span></a></li>
-            <li class='last'><a href='#'><span>Help</span></a></li>
+  <div id='cssmenu'>
+    <ul>
+        <li class='active'><a href='#'><span>Create</span></a></li>
+        <li><a href='#'><span>View</span></a></li>
+        <li class='last'><a href='#'><span>Logout</span></a></li>
+      <li class='last'><a href='#'><span>Help</span></a></li>
+    </ul>
+  </div>
 
 
-        </ul>
-    </div>
         <form method="POST" action="CheckListInsert.php">
             <div class="content">
             <h1 class="subTitle">Check List</h1>
@@ -88,7 +89,7 @@
                     </tr>
                 </table>
             </div>
-        <input type="submit" id="sendCheckList" name="submit" class="createButton">Create</input>
+        <input type="submit" id="sendCheckList" name="submit" class="createButton"></input>
         </form>
     </body>
 </html>
