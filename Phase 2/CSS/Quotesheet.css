@@ -1,12 +1,29 @@
+#loginMain h1{
+	margin-left: 30%;
+	margin-bottom: 25%;
+	margin-top: -35%;
+}
+
+#loginMain input{
+	margin-left: -50%;
+
+}
+
+#loginMain textarea{
+	margin-left: -50%;
+
+}
+
 #loginMain {
-	margin-top: 10%;
-	margin-left: 39%;
+	margin-top: 20%;
+	margin-left: 30%;
 	width: 20%;
-	border: 1px solid;
 	padding-bottom: 10px;
 	padding-left: 10px;	
 	position: fixed;
 }
+
+
 
 body{
 	/*background: linear-gradient(to bottom, #D3E8F9, white);
@@ -15,6 +32,7 @@ body{
 }
 
 #loginDetails{
+
 	font-family: Helvetica;
 }
 
@@ -23,19 +41,7 @@ h1{
 	font-family: Helvetica;
 }
 
-input[type="submit"]
-{
-	color: white;
-	background-color: blue;
-	border-style: none;
-	font-family: Helvetica;
-	padding: 3% 4% 3% 4%;
-	margin: 8% 0 0 37%;
-	text-decoration: none;
-	font-weight: bold;
-	border-radius: 16px;
-	
-}
+
 
 .companyHeader{
 	position: fixed;
@@ -51,26 +57,21 @@ img{
 	margin: 0 0 0 32%;
 }
 
-.usernameBox{
-	margin: 0 0 0 0;
-	width: 95%;
+.Quotes{
+	margin-bottom: 10%;
+
 	border: 1px solid;
 	border-color: #c4c4c4 #d1d1d1 #d4d4d4;
 	border-radius: 2px;
 	outline: 5px solid #eff4f7;
-	text-align: center;
-}
-
-.passwordBox{
-	margin: 5% 0 0 0;
-	width: 95%;
-	border: 1px solid;
-	border-color: #c4c4c4 #d1d1d1 #d4d4d4;
-	border-radius: 2px;
-	outline: 5px solid #eff4f7;
-	text-align: center;
+	text-align: left;
 
 }
+
+.area{
+
+}
+
 
 #button{
 	margin: 10% 0 0 34%;
