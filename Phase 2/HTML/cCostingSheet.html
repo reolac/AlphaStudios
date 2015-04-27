@@ -37,7 +37,11 @@
             <div>W.O.N: <input type="text" name="costingSheet" id="costingSheet"/></div>
 
              
-            <td><input type="button" id="addmorePOIbutton" value="Add More POIs" onclick="totalIt('materialsTable')"/></td>
+            <td><input type="button" id="addmorePOIbutton" value="Total Materials" onclick="totalIt('materialsTable')"/></td>
+
+            <td><input type="button" id="addmorePOIbutton" value="Total Plus 15%" onclick="totalPer('materialsTable')"/></td>
+
+            <td><input type="button" id="addmorePOIbutton" value="Total Cost" onclick="totalCost('materialsTable')"/></td>
             
             <table class="desc">
                 <tr>
@@ -63,34 +67,33 @@
                 </tr>
             </table>
     
-<table id="materialsTable">
+            <table id="materialsTable">
                 <tr>
                     <td class="col1">0</td>
                     <td class="iDesc"><input type="text" name="costingSheet" id="materialsTableDesc0" onInput="getTotal('materialsTable')"/></td>
                     <td class="no"><input type="text" name="costingSheet" id="materialsTableReqd0"  onkeyup="calc('materialsTable', 0)"/></td>
-                    <td class="no"><input type="text" name="costingSheet" id="materialsTableUCost0"  onkeyup="calc('materialsTable', 0)"/></td>
-                    <td class="no"><input type="text" name="total[]" id="materialsTableTCost0" value="£0.00" disabled="disabled"></td>
+                    <td class="no">£<input value="0.00"  type="text" name="costingSheet" id="materialsTableUCost0"  onkeyup="calc('materialsTable', 0); totalIt('materialsTable'); totalPer('materialsTable'); totalCost('materialsTable')"/></td>
+                    <td class="no">£<input type="text" name="total[]" id="materialsTableTCost0" value="0.00" disabled="disabled"></td>
                 </tr>
             </table>
-
             
             <table class="desc">
                 <tr>
                     <td class="col1"></td>
                     <td colspan="2" class="iDesc"><b>TOTAL MATERIALS<b></td>
-                    <td class="no"><input type="text" name="costingSheet" id="materialsTableTCost"/></td>
+                    <td class="no"><input type="text" name="costingSheet" id="materialsTableTCost" disabled="disabled"/></td>
                 </tr>
 
                 <tr>
                     <td></td>
                     <td colspan="2">Total Carriage charge</td>
-                    <td class="no"><input type="text" name="costingSheet" id="materialsTableCarriage"/></td>
+                    <td class="no"><input type="text" name="costingSheet" id="materialsTableCarriage" oninput="totalCost('materialsTable')" value="0.00"/></td>
                 </tr>
 
                 <tr>
                     <td></td>
                     <td colspan="2" >Total Materials plus 15%</td>
-                    <td class="no"><input type="text" name="costingSheet" id="materialsTableTCostPer"/></td>
+                    <td class="no"><input type="text" name="costingSheet" id="materialsTableTCostPer" disabled="disabled"/></td>
                 </tr>
 
                 <tr>
@@ -121,7 +124,6 @@
                     <td class="no"><input type="text" name="costingSheet" id="costingSheet"/></td>
                     <td class="no"><input type="text" name="costingSheet" id="costingSheet"/></td>
                     <td class="no"><input type="text" name="costingSheet" id="costingSheet"/></td>
-                    
                 </tr> 
                 </table> 
 
