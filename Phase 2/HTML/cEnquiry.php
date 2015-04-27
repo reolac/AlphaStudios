@@ -17,9 +17,14 @@
       #header('Location: login.html');
     }?>
 	<body>
+	<div class="companyHeader">
+			<img src="../img/GELogo.jpg"> 
+		</div>
+		
 	<div id='cssmenu'>
 		<ul>
    			<li class='active'><a href='#'><span>Create</span></a></li>
+   			<li class='last'><a href='#'><span>Home</span></a></li>
    			<li><a href='#'><span>View</span></a></li>
    			<li class='last'><a href='#'><span>Logout</span></a></li>
 			<li class='last'><a href='#'><span>Help</span></a></li>
