@@ -84,7 +84,7 @@ function totalCost(tableID) {
 	document.getElementById(tableID + "Total").value= (isNaN(total)?"0.00":total.toFixed(2));                        
 	console.log(document.getElementById(tableID+"Carriage").value);
 	if (document.getElementById(tableID+"Carriage").value == ""){
-		document.getElementById(tableID + "Total").value= (isNaN(1)?"0.00":total.toFixed(2)); 		
+		document.getElementById(tableID + "Total").value= (price2.toFixed(2)); 		
 	}
 
 }   
