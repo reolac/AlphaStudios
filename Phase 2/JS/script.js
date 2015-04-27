@@ -38,6 +38,9 @@ var cell5 = row.insertCell(4);
 var element5 = document.createElement('input');
 element5.type="text";
 element5.id = tableID + "TCost" + len;
+element5.disabled = "disabled";
+element5.value = "£0.00"
+element5.name = "total[]"
 cell5.appendChild(element5);
 
 
@@ -49,6 +52,21 @@ function calc(tableID, idx) {
   var price = parseFloat(document.getElementById(tableID+"Reqd"+idx).value)*
               parseFloat(document.getElementById(tableID+"UCost"+idx).value);
   //alert(idx+":"+price);  
-  document.getElementById(tableID+"TCost"+idx).value= isNaN(price)?"0.00":price.toFixed(2);
+  document.getElementById(tableID+"TCost"+idx).value= '£' + (isNaN(price)?"0.00":price.toFixed(2));
    
 }
+
+function totalIt(tableID) {
+    var qtys = document.getElementsByName('total[]');
+	var total = 0;
+	for (var i = 0; i < qtys.length; i++) {
+		calc(tableID, i);
+		  var price = parseFloat(document.getElementById(tableID+"Reqd"+i).value)*
+              parseFloat(document.getElementById(tableID+"UCost"+i).value);
+		total += isNaN(price)?0:price;
+		alert(total);
+	};
+  	
+
+	document.getElementById(tableID + "Total").value= '£' + (isNaN(total)?"0.00":total.toFixed(2));                        
+}   
