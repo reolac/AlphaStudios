@@ -20,7 +20,7 @@ function addRow(tableID){
 	var element3 = document.createElement('input');
 	element3.type="text";
 	element3.id = tableID + "Reqd" + len;
-	element3.onkeyup=function() {calc(tableID, len);}
+	element3.onkeyup=function() {calc(tableID, len); totalIt(tableID); totalPer(tableID); totalCost(tableID)}
 	cell3.appendChild(element3);
 
 	var cell4 = row.insertCell(3);
@@ -29,7 +29,7 @@ function addRow(tableID){
 	element4.type="text";
 	element4.value="0.00";
 	element4.id = tableID + "UCost" + len;
-	element4.onkeyup=function() {calc(tableID, len);}
+	element4.onkeyup=function() {calc(tableID, len); totalIt(tableID); totalPer(tableID); totalCost(tableID)}
 	cell4.appendChild(element4);
 
 	var cell5 = row.insertCell(4);

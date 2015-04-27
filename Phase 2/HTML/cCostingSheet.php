@@ -24,6 +24,15 @@
         	<div id="container">
                 <img src="../img/GELogo.jpg">
         	</div>
+            <div id='cssmenu'>
+                <ul>
+                    <li class='active'><a href='#'><span>Create</span></a></li>
+                    <li><a href='#'><span>View</span></a></li>
+                    <li class='last'><a href='#'><span>Logout</span></a></li>
+                    <li class='last'><a href='#'><span>Help</span></a></li>
+                </ul>
+            </div>
+
     		<h1 class="subTitle">New Costing Sheet</h1>
             <div class="costForm">
                 <div>Customer: <input type="text" name="costingCustomer" id="costingSheet"/></div>
@@ -32,11 +41,7 @@
                 <div>Date: <input type="date" name="costingDate" id="costingSheet"/></div>
                 <div>Ref: <input type="text" name="costingRef" id="costingSheet"/></div>
                 <div>W.O.N: <?php echo"<input type='text' name='costingWON' id='costingSheet' value='$wr'>"?></div>
-                <td><input type="button" id="addmorePOIbutton" value="Total Materials" onclick="totalIt('materialsTable')"/></td>
-
-                <td><input type="button" id="addmorePOIbutton" value="Total Plus 15%" onclick="totalPer('materialsTable')"/></td>
-
-                <td><input type="button" id="addmorePOIbutton" value="Total Cost" onclick="totalCost('materialsTable')"/></td>
+                
                 <table class="desc">
                     <tr>
                         <th class="col1">Ref</th>
@@ -60,8 +65,8 @@
                     <tr>
                         <td class="col1">0</td>
                         <td class="iDesc"><input type="text" name="costingSheet" id="materialsTableDesc0" onInput="getTotal('materialsTable')"/></td>
-                        <td class="no"><input type="text" name="costingSheet" id="materialsTableReqd0"  onkeyup="calc('materialsTable', 0)"/></td>
-                        <td class="no"><input type="text" name="costingSheet" id="materialsTableUCost0"  onkeyup="calc('materialsTable', 0)"/></td>
+                        <td class="no"><input type="text" name="costingSheet" id="materialsTableReqd0"  onkeyup="calc('materialsTable', 0); totalIt('materialsTable'); totalPer('materialsTable'); totalCost('materialsTable')"/></td>
+                        <td class="no"><input type="text" name="costingSheet" id="materialsTableUCost0"  onkeyup="calc('materialsTable', 0); totalIt('materialsTable'); totalPer('materialsTable'); totalCost('materialsTable')"/></td>
                         <td class="no"><input type="text" name="total[]" id="materialsTableTCost0" value="£0.00" disabled="disabled"></td>
                     </tr>
                 </table>
@@ -74,7 +79,7 @@
                     <tr>
                         <td></td>
                         <td colspan="2">Total Carriage charge</td>
-                        <td class="no"><input type="text" name="costingSheet" id="materialsTableCarriage"/></td>
+                        <td class="no"><input onkeyup="calc('materialsTable', 0); totalIt('materialsTable'); totalPer('materialsTable'); totalCost('materialsTable')" type="text" name="costingSheet" id="materialsTableCarriage"/></td>
                     </tr>
                     <tr>
                         <td></td>
