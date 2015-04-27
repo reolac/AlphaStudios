@@ -51,7 +51,6 @@ function addRow(tableID){
 		totalCost(tableID)
 	}
 	cell4.appendChild(element4);
-
 	var cell5 = row.insertCell(4);
 	cell5.className = "no";
 	cell5.innerHTML = '£'
@@ -59,10 +58,12 @@ function addRow(tableID){
 	element5.type="text";
 	element5.id = tableID + "TCost" + len;
 	element5.name = tableID + "TCost" + len;
-	element5.disabled = "disabled"; 
+	element5.readOnly = true; 
 	element5.value = "0.00"
 	element5.name = tableID + "TCost" + len;
 	cell5.appendChild(element5);
+
+	document.getElementById(tableID+"Count").value= len + 1;
 }	
 
 function calc(tableID, idx) {
