@@ -85,14 +85,17 @@ a {
 
 #enquiry{
     font-family: "Times New Roman", Arial, Helvetica, sans-serif;
-    width: 50%;
+    display:block;
     border-collapse: collapse;
     margin: 0 0 0 -0.5%;
 }
 
-#enquiry td, #enquiry th {
+#enquiry td {
     border: 1px solid black;
     padding: 3px 0px 2px 0px;
+		width:10%;
+
+	
 }
 
 #enquiry th {
@@ -103,12 +106,16 @@ a {
     padding-right: 5px;
     background-color: white;
     color: black;
-
+	width:10%;
+ 
 }
 
 #enquiry tr.alt td {
     color: #000000;
     background-color: #EAF2D3;
+}
+.size{
+width:100%;
 }
 
 

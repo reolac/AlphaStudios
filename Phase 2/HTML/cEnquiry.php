@@ -51,27 +51,27 @@
 					<th>Work Order Reference</th>
 					<th>Work Order Execution Status</th>
 				</tr>
-				<tr>
-					<td><input name="dateandtime" type="date"></td>
-					<td><input id="modeOfEnquiry" name="modeOfEnquiry" type="text"></td>
-					<td><input id="reference" name="reference" type="text"></td>
-					<td><input id="nameandAddressofEnquiry" name="nameandAddressofEnquiry" type="text"></td>
+				<tr >
+					<td><input class="size" name="dateandtime" type="date"></td>
+					<td><input  class="size" id="modeOfEnquiry" name="modeOfEnquiry" type="text"></td>
+					<td><input  class="size" id="reference" name="reference" type="text"></td>
+					<td><input class="size" id="nameandAddressofEnquiry" name="nameandAddressofEnquiry" type="text"></td>
 
-					<td><input id="customerRequirementsAndDeliveryDate" name=
+					<td><input class="size" id="customerRequirementsAndDeliveryDate" name=
 					"customerRequirementsAndDeliveryDate" type="text"></td>
 
-					<td><input id="quotation" name="quotation" type="text"></td>
+					<td><input class="size" id="quotation" name="quotation" type="text"></td>
 
-					<td><input id="customerOrderReference" name=
+					<td><input class="size" id="customerOrderReference" name=
 					"customerOrderReference" type="text"></td>
 
-					<td><input id="orderAcceptance" name="orderAcceptance" type=
+					<td><input class="size" id="orderAcceptance" name="orderAcceptance" type=
 					"text"></td>
 
-					<td><input id="workOrderReference" name="workOrderReference" type=
+					<td><input class="size" id="workOrderReference" name="workOrderReference" type=
 					"text"></td>
 
-					<td><input id="workOrderExecution" name="workOrderExecution" type=
+					<td><input class="size" id="workOrderExecution" name="workOrderExecution" type=
 					"text"></td>
 				</tr>
 			</table>
