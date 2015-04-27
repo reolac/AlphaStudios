@@ -9,9 +9,10 @@
     <img src="../img/GELogo.jpg"> 
 	<div id='cssmenu'>
 		<ul>
-   			<li><a href='#'><span>Create</span></a></li>
-   			<li class='active'><a href='#'><span>View</span></a></li>
-   			<li class='last'><a href='#'><span>Help</span></a></li>
+   			<li class='active'><a href='#'><span>Create</span></a></li>
+   			<li><a href='#'><span>View</span></a></li>
+   			<li class='last'><a href='#'><span>Logout</span></a></li>
+			<li class='last'><a href='#'><span>Help</span></a></li>
 		</ul>
 	</div>
 		<table id="enquiry" class="table">

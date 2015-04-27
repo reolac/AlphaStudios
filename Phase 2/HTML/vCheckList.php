@@ -34,6 +34,16 @@
 		<div id= "container">
 			<img src="../img/GELogo.jpg"> 
 		</div>
+    <div id='cssmenu'>
+        <ul>
+            <li class='active'><a href='#'><span>Create</span></a></li>
+            <li><a href='#'><span>View</span></a></li>
+            <li class='last'><a href='#'><span>Logout</span></a></li>
+            <li class='last'><a href='#'><span>Help</span></a></li>
+
+
+        </ul>
+    </div>
         <div class="content">
         <h1 class="subTitle">Check List</h1>
             <table>
