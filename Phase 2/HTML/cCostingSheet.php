@@ -32,6 +32,11 @@
                     <li class='last'><a href='#'><span>Help</span></a></li>
                 </ul>
             </div>
+            <input type="text" name="materialsTableCount" id="materialsTableCount"/>
+            <input type="text" name="servicesTableCount" id="servicesTableCount"/>
+            <input type="text" name="labourTableCount" id="labourTableCount"/>
+
+            
 
     		<h1 class="subTitle">New Costing Sheet</h1>
             <div class="costForm">
@@ -64,18 +69,18 @@
 
                 <table id="materialsTable">
                     <tr>
-                        <td class="col1"><input type="text" value="0" disabled="disabled" name="materialsTableRef0" id="materialsTableRef0" /></td>
+                        <td class="col1"><input type="text" value="0" readonly name="materialsTableRef0" id="materialsTableRef0" /></td>
                         <td class="iDesc"><input type="text" name="materialsTableDesc0" id="materialsTableDesc0" onInput="getTotal('materialsTable')"/></td>
                         <td class="no"><input type="text" name="materialsTableReqd0" id="materialsTableReqd0"  onkeyup="calc('materialsTable', 0); totalIt('materialsTable'); totalPer('materialsTable'); totalCost('materialsTable')"/></td>
                         <td class="no">£<input type="text" name="materialsTableUCost0" id="materialsTableUCost0"  value="0.00" onkeyup="calc('materialsTable', 0); totalIt('materialsTable'); totalPer('materialsTable'); totalCost('materialsTable')"/></td>
-                        <td class="no">£<input type="text" name="materialsTableTCost0" id="materialsTableTCost0" value="0.00" disabled="disabled"></td>
+                        <td class="no">£<input type="text" name="materialsTableTCost0" id="materialsTableTCost0" value="0.00" readonly></td>
                     </tr>
                 </table>
                 <table class="desc">
                     <tr>
                         <td class="col1"></td>
                         <td colspan="2" class="iDesc"><b>TOTAL MATERIALS<b></td>
-                        <td class="no">£<input type="text" name="costingSheet" disabled="disabled" id="materialsTableTCost"/></td>
+                        <td class="no">£<input type="text" name="costingSheet" readonly id="materialsTableTCost"/></td>
                     </tr>
                     <tr>
                         <td></td>
@@ -85,12 +90,12 @@
                     <tr>
                         <td></td>
                         <td colspan="2" >Total Materials plus 15%</td>
-                        <td class="no">£<input type="text" name="costingSheet" disabled="disabled" id="materialsTableTCostPer"/></td>
+                        <td class="no">£<input type="text" name="costingSheet" readonly id="materialsTableTCostPer"/></td>
                     </tr>
                     <tr>
                         <td></td>
                         <td colspan="2"><b>TOTAL MATERIAL COSTS</b></td>
-                        <td class="no">£<input type="text" name="costingSheet" disabled="disabled" id="materialsTableTotal"/></td>
+                        <td class="no">£<input type="text" name="costingSheet" readonly id="materialsTableTotal"/></td>
                     </tr>
                     <tr>
                         <td></td>
