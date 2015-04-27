@@ -25,6 +25,7 @@ function addRow(tableID){
 	cell3.className = "no";
 	var element3 = document.createElement('input');
 	element3.type="text";
+	element3.value="0";
 	element3.id = tableID + "Reqd" + len;
 	element3.name += tableID + "Reqd" + len;
 	element3.onkeyup=function() {
@@ -35,7 +36,7 @@ function addRow(tableID){
 			totalPer(tableID);
 			totalCost(tableID);
 		}
-		if (tableID =='labourTable')
+		else if (tableID =='labourTable')
 		{
 			totalIt(tableID);
 		}  
@@ -43,6 +44,7 @@ function addRow(tableID){
 		{
 			totalPer(tableID);
 		}	
+		grandTotal();
 	}
 	cell3.appendChild(element3);
 
@@ -63,7 +65,7 @@ function addRow(tableID){
 			totalCost(tableID);
 		}
 
-		if (tableID =='labourTable')
+		else if (tableID =='labourTable')
 		{
 			totalIt(tableID);
 		} 
@@ -72,6 +74,7 @@ function addRow(tableID){
 		{
 			totalPer(tableID);
 		}	
+		grandTotal();
 	}
 	cell4.appendChild(element4);
 	var cell5 = row.insertCell(4);
@@ -146,4 +149,16 @@ function totalCost(tableID) {
 		document.getElementById(tableID + "Total").value= (price2.toFixed(2)); 		
 	}
 
-}   
+}  
+
+function grandTotal(){
+	console.log(materialTotal);
+	var materialTotal = parseFloat(document.getElementById("materialsTableTotal").value);
+	var servicesTotal = parseFloat(document.getElementById("servicesTableTotal").value);
+	var contractTotal = parseFloat(document.getElementById("contractTableTotal").value);
+	var labourTotal = parseFloat(document.getElementById("labourTableTotal").value);
+	
+	var grandTotal = materialTotal + servicesTotal + contractTotal + labourTotal;
+
+	document.getElementById("TableTotal").value= (isNaN(grandTotal)?"0.00":grandTotal.toFixed(2));	
+} 
