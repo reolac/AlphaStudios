@@ -19,8 +19,8 @@ img{
 	margin-left: 42%;
 }
 .content {
-	position: fixed;
-	margin: 10% 0 0 30%;
+
+	margin: 3% 0 0 30%;
 	width: 40%;
 	border: 2px solid;
 	padding-bottom: 10px;
@@ -37,7 +37,7 @@ img{
 }
 
 #container {
-	position: fixed;
+
 	width: 110%;
 	margin: -0.8% 0 0 -5%;
 	text-align: center; 
@@ -62,16 +62,14 @@ img{
 }
 
 .createButton{
-	padding: 1% 4% 1% 4%;
-    background: blue;
-	color: white;
+
 	font-weight: bolder;
-	border-style: none;
-	margin: 42% 0 0 44%;
-	position: fixed;
-	border-radius: 10px;
+	background: #AAACF0;
+	border: 2px solid;
+	box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.75);
+	margin: 3% 0 0 47%;
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
-	font-size: 14pt;
+	font-size: 10pt;
 }
 
 body {
