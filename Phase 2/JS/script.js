@@ -10,8 +10,7 @@ function addRow(tableID){
 	element1.id=tableID + "Ref" + len;
 	element1.name += tableID + "Ref" + len;
 	element1.value = len;
-
-	element1.disabled = "disabled";
+	element1.readOnly = true;
 	cell1.appendChild(element1);
 
 	var cell2 = row.insertCell(1);
@@ -28,12 +27,23 @@ function addRow(tableID){
 	element3.type="text";
 	element3.id = tableID + "Reqd" + len;
 	element3.name += tableID + "Reqd" + len;
- 	element3.onkeyup=function() {
- 		calc(tableID, len); 
- 		totalIt(tableID); 
- 		totalPer(tableID); 
- 		totalCost(tableID)
- 	}
+	element3.onkeyup=function() {
+		calc(tableID, len);
+		if (tableID == 'materialsTable')
+		{
+			totalIt(tableID);
+			totalPer(tableID);
+			totalCost(tableID);
+		}
+		if (tableID =='labourTable')
+		{
+			totalIt(tableID);
+		}  
+		else
+		{
+			totalPer(tableID);
+		}	
+	}
 	cell3.appendChild(element3);
 
 	var cell4 = row.insertCell(3);
@@ -45,10 +55,23 @@ function addRow(tableID){
 	element4.id = tableID + "UCost" + len;
 	element4.name = tableID + "UCost" + len;
 	element4.onkeyup=function() {
-		calc(tableID, len); 
-		totalIt(tableID); 
-		totalPer(tableID); 
-		totalCost(tableID)
+		calc(tableID, len);
+		if (tableID == 'materialsTable')
+		{
+			totalIt(tableID);
+			totalPer(tableID);
+			totalCost(tableID);
+		}
+
+		if (tableID =='labourTable')
+		{
+			totalIt(tableID);
+		} 
+		
+		else
+		{
+			totalPer(tableID);
+		}	
 	}
 	cell4.appendChild(element4);
 	var cell5 = row.insertCell(4);
@@ -70,19 +93,31 @@ function calc(tableID, idx) {
   var price = parseFloat(document.getElementById(tableID+"Reqd"+idx).value)*
               parseFloat(document.getElementById(tableID+"UCost"+idx).value);
   document.getElementById(tableID+"TCost"+idx).value= (isNaN(price)?"0.00":price.toFixed(2));
-   
+  if(tableID == 'contractTable')
+  {
+  	price *= 1.15;
+  	document.getElementById(tableID+"TCostPer").value= (isNaN(price)?"0.00":price.toFixed(2));
+  	document.getElementById(tableID+"Total").value= (isNaN(price)?"0.00":price.toFixed(2));
+  }   
 }
 
 function totalIt(tableID) {
 	var table = document.getElementById(tableID);
 	var len = table.rows.length;
 	var total = 0;
+
 	for (var i = 0; i < len; i++) {
 		calc(tableID, i);
 		 var price = parseFloat(document.getElementById(tableID+"TCost"+i).value);
 		total += isNaN(price)?0:price;
 	};
-	document.getElementById(tableID + "TCost").value= (isNaN(total)?"0.00":total.toFixed(2));                        
+	document.getElementById(tableID + "TCost").value= (isNaN(total)?"0.00":total.toFixed(2));
+	
+	if (tableID == 'labourTable')
+	{
+		document.getElementById(tableID + "TCostPer").value= (isNaN(total)?"0.00":total.toFixed(2));
+		document.getElementById(tableID + "Total").value= (isNaN(total)?"0.00":total.toFixed(2));
+	}                        
 } 
 
 function totalPer(tableID) {

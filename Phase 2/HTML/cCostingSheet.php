@@ -33,9 +33,9 @@
                     <li class='last'><a href='#'><span>Help</span></a></li>
                 </ul>
             </div>
-            <input type="text" name="materialsTableCount" id="materialsTableCount"/>
-            <input type="text" name="servicesTableCount" id="servicesTableCount"/>
-            <input type="text" name="labourTableCount" id="labourTableCount"/>
+            <input type="text" name="materialsTableCount" value="1" id="materialsTableCount"/>
+            <input type="text" name="servicesTableCount" value="1" id="servicesTableCount"/>
+            <input type="text" name="labourTableCount" value="1" id="labourTableCount"/>
 
             
 
@@ -71,7 +71,7 @@
                 <table id="materialsTable">
                     <tr>
                         <td class="col1"><input type="text" value="0" readonly name="materialsTableRef0" id="materialsTableRef0" /></td>
-                        <td class="iDesc"><input type="text" name="materialsTableDesc0" id="materialsTableDesc0" onInput="getTotal('materialsTable')"/></td>
+                        <td class="iDesc"><input type="text" name="materialsTableDesc0" id="materialsTableDesc0"/></td>
                         <td class="no"><input type="text" name="materialsTableReqd0" id="materialsTableReqd0"  onkeyup="calc('materialsTable', 0); totalIt('materialsTable'); totalPer('materialsTable'); totalCost('materialsTable')"/></td>
                         <td class="no">£<input type="text" name="materialsTableUCost0" id="materialsTableUCost0"  value="0.00" onkeyup="calc('materialsTable', 0); totalIt('materialsTable'); totalPer('materialsTable'); totalCost('materialsTable')"/></td>
                         <td class="no">£<input type="text" name="materialsTableTCost0" id="materialsTableTCost0" value="0.00" readonly></td>
@@ -113,23 +113,23 @@
                 </table>
                 <table id="servicesTable">
                     <tr>
-                        <td class="col1">0</td>
-                        <td class="iDesc"><input type="text" id="servicesTableDesc0" /></td>
-                        <td class="no"><input type="text" id="servicesTableReqd0"  onkeyup="calc('servicesTable', 0); totalIt('servicesTable'); totalPer('servicesTable');"/></td>
-                        <td class="no">£<input type="text" id="servicesTableUCost0" value="0.00" onkeyup="calc('servicesTable', 0); totalPer('servicesTable');"/></td>
-                        <td class="no">£<input type="text" id="servicesTableTCost0" value="0.00" disabled="disabled"/></td>
+                        <td class="col1"><input type="text" value="0" readonly name="servicesTableRef0" id="servicesTableRef0"/></td>
+                        <td class="iDesc"><input type="text" name="servicesTableDesc0" id="servicesTableDesc0" /></td>
+                        <td class="no"><input type="text" name="servicesTableReqd0" id="servicesTableReqd0"  onkeyup="calc('servicesTable', 0); totalIt('servicesTable'); totalPer('servicesTable');"/></td>
+                        <td class="no">£<input type="text" name="servicesTableUCost0" id="servicesTableUCost0" value="0.00" onkeyup="calc('servicesTable', 0); totalPer('servicesTable');"/></td>
+                        <td class="no">£<input type="text" name="servicesTableTCost0" id="servicesTableTCost0" value="0.00" readonly/></td>
                     </tr> 
                     </table>    
                     <table class="desc">
                     <tr>
                         <td class="col1"></td>
                         <td colspan="4">Total Outside Services Costs plus 15%</td>
-                        <td class="no">£<input type="text" name="costingSheet" disabled="disabled" id="servicesTableTCostPer"/></td>
+                        <td class="no">£<input type="text" name="costingSheet" readonly id="servicesTableTCostPer"/></td>
                     </tr>
                     <tr>
                         <td></td>
                         <td colspan="4"><b>TOTAL COSTS<b></td>
-                        <td>£<input type="text" name="costingSheet" disabled="disabled" id="servicesTableTotal"/></td>
+                        <td>£<input type="text" name="costingSheet" readonly id="servicesTableTotal"/></td>
                     </tr>
                     <tr>
                         <td></td>
@@ -145,19 +145,19 @@
                     <tr>
                         <td></td>
                         <td colspan="2">Sub-contract Labour only costs</td>
-                        <td><input type="text" name="costingSheet" id="costingSheet"/></td>
-                        <td><input type="text" name="costingSheet" id="costingSheet"/></td>
-                        <td></td>
+                        <td><input type="text" name="contractTableReqd0" id="contractTableReqd0" value="0" onkeyup="calc('contractTable', 0); "/></td>
+                        <td>£<input type="text" name="contractTableUCost0" id="contractTableUCost0" value="0.00" onkeyup="calc('contractTable', 0);"/></td>
+                        <td>£<input type="text" name="contractTableTCost0" id="contractTableTCost0" value="0.00" readonly/></td>
                     </tr>            
                     <tr>
                         <td></td>
                         <td colspan="4">Sub-Contract Labour plus 15%</td>
-                        <td>0</td>
+                        <td><input type="text" name="contractTableTCostPer" id="contractTableTCostPer" readonly/></td>
                     </tr>
                     <tr>
                         <td></td>
                         <td colspan="4"><b>TOTAL SUB-CONTRACT LABOUR COSTS<b></td>
-                        <td></td>
+                        <td><input type="text" name="contractTableTCostPer" id="contractTableTotal" readonly/></td>
                     </tr>
                     <tr>
                         <td><input type="button" id="delPOIbutton" value="Add Row" onclick="addRow('labourTable')"/></td>
@@ -169,34 +169,34 @@
                 </table >
                     <table id="labourTable">
                     <tr>
-                        <td class="col1">0</td>
-                        <td class="lab" colspan="2"><input type="text" name="costingSheet" id="costingSheet"/></td>
-                        <td class="no2"><input type="text" name="costingSheet" id="costingSheet"/></td>
-                        <td class="no2"><input type="text" name="costingSheet" id="costingSheet"/></td>
-                        <td class="no"><input type="text" name="costingSheet" id="costingSheet"/></td>
+                        <td class="col1"><input type="text" value="0" readonly name="labourTableRef0" id="labourTableRef0" /></td>
+                        <td class="lab"><input type="text" name="labourTableDesc0" id="labourTableDesc0"/></td>
+                        <td class="no2"><input type="text" name="labourTableReqd0" id="labourTableReqd0" value="0"/ onkeyup="calc('labourTable', 0); totalIt('labourTable', 0);"></td>
+                        <td class="no2">£<input type="text" name="labourTableUCost0" id="labourTableUCost0" value="0.00" onkeyup="calc('labourTable', 0); totalIt('labourTable', 0);"/></td>
+                        <td class="no">£<input type="text" name="labourTableTCost0" id="labourTableTCost0" value="0.00" readonly/></td>
                     </tr>  
-                </table>
+                </tabl£e>
                 <table class="desc">
                     <tr>
                         <td class="col1"></td>
                         <td colspan="4"><b>TOTAL LABOUR<b></td>
-                        <td class="no">0</td>
+                        <td class="no">£<input type="text" name="labourTableTCost" id="labourTableTCost" value="0.00" readonly/></td>
                     </tr>
                     <tr>
                         <td></td>
                         <td colspan="4">Sub-Contract Labour plus 0%</td>
-                        <td class="no">0</td>
+                        <td class="no">£<input type="text" name="labourTableTCostPer" readonly id="labourTableTCostPer"/></td>
                     </tr>
                     <tr>
                         <td></td>
                         <td colspan="4">Total cost for labour</td>
-                        <td class="no">0</td>
+                        <td class="no">£<input type="text" name="labourTableTotal" readonly id="labourTableTotal"/></td>
                     </tr>
                     <tr>
                     </tr>
                     <tr>
                         <td colspan="5"><b>TOTAL COST<b></td>
-                        <td>0</td>
+                        <td>£</td>
                     </tr>
                 </table>
             </div>
