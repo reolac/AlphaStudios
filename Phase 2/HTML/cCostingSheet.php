@@ -203,7 +203,8 @@
             <div id="container">
             <input type="submit" id="sendCheckList" name="submit" class="createButton"></input>
             </div>
-        </form>
+    
+  </div>
         
     </body>
 </html>
