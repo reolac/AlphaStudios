@@ -74,8 +74,10 @@
 					"text"></td>
 				</tr>
 			</table>
+                    <div id="container">
 			<input class="createButton" id="button" type="submit" name="submit" value="Create">
-		</form>
+                    </div>
+                        </form>
 	</div>
         </body>
     
