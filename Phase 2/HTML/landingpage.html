@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Home Page</title>
-        <link rel="stylesheet" type="text/css" href="../css/homepage2.css">
+        <link rel="stylesheet" type="text/css" href="../css/landingpage.css">
     </head>
     <?php 
     ob_start();
@@ -23,19 +23,41 @@
 
    <div id='cssmenu'>
     <ul>
+        <li class='last'><a href='#'><span>Home</span></a></li>
         <li class='active'><a href='#'><span>Create</span></a></li>
         <li><a href='#'><span>View</span></a></li>
         <li class='last'><a href='#'><span>Logout</span></a></li>
       <li class='last'><a href='#'><span>Help</span></a></li>
     </ul>
   </div>
+  <div id = "buttons">
+<form action="cEnquiry.php">
+  <button class="Enquiry "type="submit">Enquiry</button>
+  </form>
 
-  <button class="Enquiry "type="button">Enquiry</button>
-  <button class="Quotes" type="button">Quotes</button>
-  <button class="Costing" type="button">Costing</button>
-  <button class="Checklist"type="button">Checklist</button>
-  <button class="maintanence"type="button">Maintanence</button>
-  <button class="order"type="button">Order</button>
+  <form action="quotesheet.HTML">
+  <button class="Quotes" type="submit">Quotes</button>
+  </form>
+
+  <form action="cCostingSheet.php">
+  <button class="Costing" type="submit">Costing</button>
+  </form>
+
+  <form action="cEnquiry.php">
+  <button class="Checklist"type="submit">Checklist</button>
+  </form>
+
+  <form action="cMaintenanceSpecification.html">
+  <button class="maintanence"type="submit">Maintanence</button>
+  </form>
+
+  <form action="cOrderRegister.html">
+  <button class="order"type="submit">Order</button>
+  </form>
+  </div>
+
+
+
         
     </body>
 </html>
