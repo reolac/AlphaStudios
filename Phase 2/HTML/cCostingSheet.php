@@ -33,9 +33,9 @@
                     <li class='last'><a href='#'><span>Help</span></a></li>
                 </ul>
             </div>
-            <input type="text" name="materialsTableCount" value="1" id="materialsTableCount"/>
-            <input type="text" name="servicesTableCount" value="1" id="servicesTableCount"/>
-            <input type="text" name="labourTableCount" value="1" id="labourTableCount"/>
+            <input type="hidden" name="materialsTableCount" value="1" id="materialsTableCount"/>
+            <input type="hidden" name="servicesTableCount" value="1" id="servicesTableCount"/>
+            <input type="hidden" name="labourTableCount" value="1" id="labourTableCount"/>
 
             
 
