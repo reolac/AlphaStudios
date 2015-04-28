@@ -18,9 +18,9 @@
       #header('Location: login.html');
     }?>
     <body>
-		<div id= "container">
+		
 			<img src="../img/GELogo.jpg"> 
-		</div>
+		
   <div id='cssmenu'>
     <ul>
            <li class='last'><a href='#'><span>Home</span></a></li>
@@ -30,11 +30,14 @@
       <li class='last'><a href='#'><span>Help</span></a></li>
     </ul>
   </div>
-
-
+    <h1 class="subTitle">CHECKLIST</h1>
+        <div class="progressText">
+        <b>Enquiry</b> -> Check_List -> Verbal -> Costing_Sheet -> Purchase_Order -> Unknown -> Maintenence
+    </div>  
+<progress value="20" max="70"></progress>
         <form method="POST" action="CheckListInsert.php">
-            <div class="content">
-            <h1 class="subTitle">Check List</h1>
+            
+            <div class="checkListTable">
                 <table>
                     <tr>
                         <th>Item</th>
@@ -91,7 +94,8 @@
                 </table>
             
         <input type="submit" id="sendCheckList" name="submit" class="createButton"></input>
-        </div>
+        
         </form>
+    </div>
     </body>
 </html>

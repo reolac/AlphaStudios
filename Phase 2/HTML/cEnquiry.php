@@ -34,7 +34,6 @@
 	</div>
 		
 
-		
 		<h1 class="subTitle">ENQUIRY - ORDER REGISTER</h1>
 		<div class="progressText">
 		<b>Enquiry</b> -> Check_List -> Verbal -> Costing_Sheet -> Purchase_Order -> Unknown -> Maintenence
