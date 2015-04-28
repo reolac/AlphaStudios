@@ -36,6 +36,10 @@
 
 		
 		<h1 class="subTitle">ENQUIRY - ORDER REGISTER</h1>
+		<div class="progressText">
+		<b>Enquiry</b> -> Check_List -> Verbal -> Costing_Sheet -> Purchase_Order -> Unknown -> Maintenence
+	</div>	
+	<progress value="10" max="70"></progress>
 		<form method="POST" action="insert.php">
 			<table class="enquiryTable">
 				<tr>

@@ -21,9 +21,9 @@
     $wr = $_SESSION['WR'];?>
     <body>
         <form method="POST" action="CostingSheetInsert.php">
-        	<div id="container">
+        	
                 <img src="../img/GELogo.jpg">
-        	</div>
+        	
             <div id='cssmenu'>
                 <ul>
                 <li class='last'><a href='#'><span>Home</span></a></li>
@@ -36,6 +36,11 @@
             <input type="hidden" name="materialsTableCount" value="1" id="materialsTableCount"/>
             <input type="hidden" name="servicesTableCount" value="1" id="servicesTableCount"/>
             <input type="hidden" name="labourTableCount" value="1" id="labourTableCount"/>
+
+            <div class="progressText">
+        Enquiry -> Check_List -> Verbal -> <B>Costing_Sheet</B> -> Purchase_Order -> Unknown -> Maintenence
+    </div>  
+    <progress value="50" max="100"></progress>
 
             
 
@@ -152,12 +157,12 @@
                     <tr>
                         <td></td>
                         <td colspan="4">Sub-Contract Labour plus 15%</td>
-                        <td><input type="text" name="contractTableTCostPer" id="contractTableTCostPer" readonly/></td>
+                        <td><input type="text" name="contractTableTCostPer" id="contractTableTCostPer" value="0.00" readonly/></td>
                     </tr>
                     <tr>
                         <td></td>
                         <td colspan="4"><b>TOTAL SUB-CONTRACT LABOUR COSTS<b></td>
-                        <td><input type="number" name="contractTableTCostPer" id="contractTableTotal" readonly/></td>
+                        <td><input type="number" name="contractTableTCostPer" id="contractTableTotal" value="0.00" readonly/></td>
                     </tr>
                     <tr>
                         <td><input type="button" id="delPOIbutton" value="Add Row" onclick="addRow('labourTable')"/></td>
