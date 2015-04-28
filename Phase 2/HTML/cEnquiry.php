@@ -17,13 +17,13 @@
       #header('Location: login.html');
     }?>
 	<body>
-	<div id="container">
+	
 			<img src="../img/GELogo.jpg"> 
-		</div>
+		
 		
 	<div id='cssmenu'>
 		<ul>
-                    <li class='last'><a href='#'><span>Home</span></a></li>
+            <li class='last'><a href='#'><span>Home</span></a></li>
    			<li class='active'><a href='#'><span>Create</span></a></li>
    			<li><a href='#'><span>View</span></a></li>
    			<li class='last'><a href='#'><span>Logout</span></a></li>
@@ -32,13 +32,12 @@
 
 		</ul>
 	</div>
-		<div id="container">
-			<p><span class="gap">GAP</span> <span class="electrical">Electrical and
-			Mechanical Services Ltd</span></p>
+		
+
 		
 		<h1 class="subTitle">ENQUIRY - ORDER REGISTER</h1>
 		<form method="POST" action="insert.php">
-			<table id="enquiry">
+			<table class="enquiryTable">
 				<tr>
 					<th>Date and Time of Enquiry</th>
 					<th>Mode of Enquiry</th>

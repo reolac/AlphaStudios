@@ -54,31 +54,7 @@ ul{
 table{
     border-collapse: collapse;
 }
-#enquiry{
-    font-family: "Times New Roman", Arial, Helvetica, sans-serif;
-    display:block;
-    border-collapse: collapse;
-    margin: 0 0 0 -0.5%;
-}
-#enquiry td {
-    border: 1px solid black;
-    padding: 3px 0px 2px 0px;
-    width:10%;
-}
-#enquiry th {
-    font-size: 10pt;
-    text-align: center;
-    padding-top: 5px;
-    padding-bottom: 1px;
-    padding-right: 5px;
-    background-color: white;
-    color: black;
-    width:10%;
-}
-#enquiry tr.alt td {
-    color: #000000;
-    background-color: #EAF2D3;
-}
+
 .size{
 width:100%;
 }
@@ -290,11 +266,6 @@ width:10%;
 
 }
 
-
-input[type="text"]
-{
-	width: auto;
-}
 #maintenance{
     width: 100%;
     border-collapse: collapse;
@@ -303,6 +274,11 @@ input[type="text"]
     
     width: 98%;
 }
+
+.enquiryTable input{
+  width: 100%;
+}
+
 
 
 
