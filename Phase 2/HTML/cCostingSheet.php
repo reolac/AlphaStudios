@@ -26,8 +26,8 @@
         	</div>
             <div id='cssmenu'>
                 <ul>
+                <li class='last'><a href='#'><span>Home</span></a></li>
                     <li class='active'><a href='#'><span>Create</span></a></li>
-                    <li class='last'><a href='#'><span>Home</span></a></li>
                     <li><a href='#'><span>View</span></a></li>
                     <li class='last'><a href='#'><span>Logout</span></a></li>
                     <li class='last'><a href='#'><span>Help</span></a></li>
@@ -200,7 +200,9 @@
                     </tr>
                 </table>
             </div>
+            <div id="container">
             <input type="submit" id="sendCheckList" name="submit" class="createButton"></input>
+            </div>
         </form>
         
     </body>

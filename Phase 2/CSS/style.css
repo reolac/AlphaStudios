@@ -1,15 +1,9 @@
 .costForm {
 	margin-left: 10%;
 	margin-right: 10%;
-
 	padding-bottom: 10px;
-
+        
 }
-
-
-
-
-
 .content {
 	margin-top: 3%;
 	margin-left: auto;
@@ -17,39 +11,30 @@
 	width: 30%;
 	border: 2px solid;
 	padding-bottom: 10px;
-
+	border: 2px solid;
+	padding-bottom: 10px;
+	padding-left: 10px;	
+	text-align: center;
 }
-
-
-
-
 #container {
 	text-align: center; 
 }
-
 .subTitle {
 	text-align: center;
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
 	
 }
-
-
-
 .createButton{
-	padding: 10px 15px;
   background: #AAACF0;
 	font-weight: bolder;
 	border: 2px solid;
-  width: 20em;  height: 2em;
+        width: 20em;  height: 2em;
 	box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.75);
 	margin-top: 20px;
-	margin-left: 40%;
-
 }
-
 .loginButton{
 	padding: 10px 15px;
-    background: white;
+        background: white;
 	margin-left: auto;
 	margin-right: auto;
 	font-weight: bolder;
@@ -57,47 +42,29 @@
 	box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.75);
 	margin-top: 10px;
 	margin-left: 47%;
-
 }
-
-
-	
 tr, td, th{
 	border: 1px solid;
 }
-
 ul{
     list-style-type: none;
     text-decoration: none;
     padding: 0;
 }
-
-table {
+table{
     border-collapse: collapse;
 }
-
-a {
-    display: block;
-    width: 90px;
-    float: left;
-}
-
-
 #enquiry{
     font-family: "Times New Roman", Arial, Helvetica, sans-serif;
     display:block;
     border-collapse: collapse;
     margin: 0 0 0 -0.5%;
 }
-
 #enquiry td {
     border: 1px solid black;
     padding: 3px 0px 2px 0px;
-		width:10%;
-
-	
+    width:10%;
 }
-
 #enquiry th {
     font-size: 10pt;
     text-align: center;
@@ -106,10 +73,8 @@ a {
     padding-right: 5px;
     background-color: white;
     color: black;
-	width:10%;
- 
+    width:10%;
 }
-
 #enquiry tr.alt td {
     color: #000000;
     background-color: #EAF2D3;
@@ -117,9 +82,6 @@ a {
 .size{
 width:100%;
 }
-
-
-
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
 @charset "UTF-8";
 /* Base Styles */
@@ -229,26 +191,20 @@ width:100%;
   -webkit-box-shadow: inset 0 5px 10px #133e40;
   box-shadow: inset 0 5px 10px #133e40;
 }
-
 progress{
 	width: 100%;
 	height: 20px;
 }
-
 .progressText{
 	position: relative;
     top: 1.20em;
     margin-left: 17%;
     word-spacing: 25px;
-    
 }
-
 html{
   background: linear-gradient(to bottom, #D3E8F9, white);
   background-repeat: no-repeat;
 }
-
-
 @media print {
     * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important;
     -ms-filter: none !important; } /* Black prints faster: sanbeiji.com/archives/953 */
@@ -263,8 +219,7 @@ html{
     p, h2, h3 { orphans: 3; widows: 3; }
     h2, h3{ page-break-after: avoid; }
     .hide-on-print { display: none !important; }
-    .print-only { display: block !important; }
-	
+    .print-only { display: block !important; }	
 }
 .desc {
 width:100%;
@@ -291,7 +246,6 @@ width:99%;
 min-width:20px;
 max-width:20px;
 }
-
 .materials {
 width:30%;
 }
@@ -299,7 +253,7 @@ width:30%;
 width:10%;
 }
 .no input{
-width:98%;
+width:88%;
 }
 .iDesc input{
 width:99%;
@@ -310,3 +264,48 @@ width:99%;
 .no2{
 width:10%;
 }
+
+.fontTh {
+	font-family: "Times New Roman";
+}
+
+.title{
+	margin-left: 42%;
+}
+
+.content table {
+	margin: 0 2% 0 0;
+}
+
+.content h1{
+	margin: 5% 3% 5% 0;
+}
+
+
+
+.logoutButton{
+	padding: 10px 15px;
+    background: #AAACF0;
+	font-weight: bolder;
+	border: 2px solid;
+	box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.75);
+	margin-left: 50%;
+
+}
+
+
+input[type="text"]
+{
+	width: auto;
+}
+#maintenance{
+    width: 100%;
+    border-collapse: collapse;
+}
+#maintenance input{
+    
+    width: 98%;
+}
+
+
+

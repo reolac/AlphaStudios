@@ -17,14 +17,14 @@
       #header('Location: login.html');
     }?>
 	<body>
-	<div class="companyHeader">
+	<div id="container">
 			<img src="../img/GELogo.jpg"> 
 		</div>
 		
 	<div id='cssmenu'>
 		<ul>
+                    <li class='last'><a href='#'><span>Home</span></a></li>
    			<li class='active'><a href='#'><span>Create</span></a></li>
-   			<li class='last'><a href='#'><span>Home</span></a></li>
    			<li><a href='#'><span>View</span></a></li>
    			<li class='last'><a href='#'><span>Logout</span></a></li>
 			<li class='last'><a href='#'><span>Help</span></a></li>
@@ -35,7 +35,7 @@
 		<div id="container">
 			<p><span class="gap">GAP</span> <span class="electrical">Electrical and
 			Mechanical Services Ltd</span></p>
-		</div>
+		
 		<h1 class="subTitle">ENQUIRY - ORDER REGISTER</h1>
 		<form method="POST" action="insert.php">
 			<table id="enquiry">
@@ -77,5 +77,7 @@
 			</table>
 			<input class="createButton" id="button" type="submit" name="submit" value="Create">
 		</form>
-	</body>
+	</div>
+        </body>
+    
 </html>

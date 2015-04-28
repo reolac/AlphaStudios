@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Create Check List</title>
-        <link rel="stylesheet" type="text/css" href="../css/checkList.css">
+        
          <link rel="stylesheet" type="text/css" href="../css/style.css">
     </head>
     <?php 
@@ -23,6 +23,7 @@
 		</div>
   <div id='cssmenu'>
     <ul>
+           <li class='last'><a href='#'><span>Home</span></a></li>
         <li class='active'><a href='#'><span>Create</span></a></li>
         <li><a href='#'><span>View</span></a></li>
         <li class='last'><a href='#'><span>Logout</span></a></li>
@@ -88,8 +89,9 @@
                         <td><input type="text" name="photoReferenceNumber" id="photoReferenceNumber" class="colorOne"></td>
                     </tr>
                 </table>
-            </div>
+            
         <input type="submit" id="sendCheckList" name="submit" class="createButton"></input>
+        </div>
         </form>
     </body>
 </html>
