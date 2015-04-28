@@ -162,3 +162,14 @@ function grandTotal(){
 
 	document.getElementById("TableTotal").value= (isNaN(grandTotal)?"0.00":grandTotal.toFixed(2));	
 } 
+
+function validity(inputID){
+	var inputValue = document.getElementByID(inputID).value
+
+	if (inputVal == "") {
+        document.getElementById(inputID).style.backgroundColor = "red";
+    }
+    else{
+        document.getElementById(inputID).style.backgroundColor = "white";
+    }
+}
