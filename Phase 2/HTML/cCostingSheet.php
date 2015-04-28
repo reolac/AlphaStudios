@@ -21,9 +21,7 @@
     $wr = $_SESSION['WR'];?>
     <body>
         <form method="POST" action="CostingSheetInsert.php">
-        	
-                <img src="../img/GELogo.jpg">
-        	
+            <img src="../img/GELogo.jpg">
             <div id='cssmenu'>
                 <ul>
                 <li class='last'><a href='#'><span>Home</span></a></li>
@@ -38,11 +36,9 @@
             <input type="hidden" name="labourTableCount" value="1" id="labourTableCount"/>
 
             <div class="progressText">
-        Enquiry -> Check_List -> Verbal -> <B>Costing_Sheet</B> -> Purchase_Order -> Unknown -> Maintenence
-    </div>  
-    <progress value="50" max="100"></progress>
-
-            
+                Enquiry -> Check_List -> Verbal -> <B>Costing_Sheet</B> -> Purchase_Order -> Unknown -> Maintenence
+            </div>  
+            <progress value="50" max="100"></progress>
 
     		<h1 class="subTitle">New Costing Sheet</h1>
             <div class="costForm">
@@ -208,8 +204,7 @@
             <div id="container">
             <input type="submit" id="sendCheckList" name="submit" class="createButton"></input>
             </div>
-    
-  </div>
+        </form>
         
     </body>
 </html>
