@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta charset="UTF-8">
 		<link href="../css/style.css" rel="stylesheet" type="text/css">
-
 		<title>Create Enquiry Form</title>
 	</head>
 	<?php 
@@ -78,7 +78,7 @@
 				</tr>
 			</table>
                     <div id="container">
-			<input class="createButton" id="button" type="submit" name="submit" value="Create">
+			<input class="createButton" id="button" type="submit" name="submit" value="Submit">
                     </div>
                         </form>
 	</div>

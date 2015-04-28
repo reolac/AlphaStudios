@@ -37,8 +37,7 @@
 <progress value="20" max="70"></progress>
         <form method="POST" action="CheckListInsert.php">
             
-            <div class="checkListTable">
-                <table>
+                <table class="checkListTable">
                     <tr>
                         <th>Item</th>
                         <th>Input</th> 
@@ -92,10 +91,10 @@
                         <td><input type="text" name="photoReferenceNumber" id="photoReferenceNumber" class="colorOne"></td>
                     </tr>
                 </table>
-            
+            <div id="container">
         <input type="submit" id="sendCheckList" name="submit" class="createButton"></input>
-        
+        </div>
         </form>
-    </div>
+   
     </body>
 </html>
