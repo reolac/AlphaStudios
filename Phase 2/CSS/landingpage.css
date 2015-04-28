@@ -1,67 +1,230 @@
 .Enquiry{
-  margin-left: 8%;
-  margin-top: 7%;
-  width: 20em;  height: 2em;
-  background: #AAACF0;
+  margin-left: 5%;
+  margin-top: 5%;
+  width: 25em;  height: 5em;
+  background: -webkit-linear-gradient(#81222a, #c6474e); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#81222a, #c6474e); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#81222a, #c6474e); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#81222a, #c6474e);
   font-weight: bolder;
   border: 2px solid;
-  box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.75);
+   border-color: black;
+   color:white;
+  box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.75);
   float: left;
+}
+.Enquiry:hover {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid white;
+}
+.Enquiry:hover a {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  display: block;
+  background: white;
+
+  border: 1px solid white;
+  -moz-box-shadow: inset 0 5px 10px white;
+  -webkit-box-shadow: inset 0 5px 10px white;
+  box-shadow: inset 0 5px 10px white;
 }
 
 .Quotes{
-  margin-left: 40%;
-  margin-top: 7%;
-  width: 20em;  height: 2em;
-  background: #AAACF0;
+  margin-left: 5%;
+  margin-top: 5%;
+  width: 25em;  height: 5em;
+  background: -webkit-linear-gradient(#81222a, #c6474e); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#81222a, #c6474e); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#81222a, #c6474e); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#81222a, #c6474e);
   font-weight: bolder;
   border: 2px solid;
-  box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.75);
+   border-color: black;
+   color:white;
+  box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.75);
     float: left;
 }
 
+.Quotes:hover {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid white;
+}
+.Quotes:hover a {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  display: block;
+  background: white;
+
+  border: 1px solid white;
+  -moz-box-shadow: inset 0 5px 10px white;
+  -webkit-box-shadow: inset 0 5px 10px white;
+  box-shadow: inset 0 5px 10px white;
+}
 .Costing{
-  margin-left: 8%;
-  margin-top: 7%;
-  width: 20em;  height: 2em;
-  background: #AAACF0;
+  margin-left: 5%;
+  margin-top: 5%;
+  width: 25em;  height: 5em;
+  background: -webkit-linear-gradient(#81222a, #c6474e); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#81222a, #c6474e); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#81222a, #c6474e); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#81222a, #c6474e);
   font-weight: bolder;
   border: 2px solid;
-  box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.75);
+   border-color: black;
+   color:white;
+box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.75);
     float: left;
 }
+.Costing:hover {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid white;
+}
+.Costing:hover a {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  display: block;
+  background: white;
 
+  border: 1px solid white;
+  -moz-box-shadow: inset 0 5px 10px white;
+  -webkit-box-shadow: inset 0 5px 10px white;
+  box-shadow: inset 0 5px 10px white;
+}
 .Checklist{
-  margin-left: 40%;
-  margin-top: 7%;
-  width: 20em;  height: 2em;
-  background: #AAACF0;
+  margin-left: 5%;
+  margin-top: 5%;
+  width: 25em;  height: 5em;
+  background: -webkit-linear-gradient(#81222a, #c6474e); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#81222a, #c6474e); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#81222a, #c6474e); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#81222a, #c6474e);
   font-weight: bolder;
   border: 2px solid;
-  box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.75);
+   border-color: black;
+   color:white;
+  box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.75);
     float: left;
 }
 
+.Checklist:hover {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid white;
+}
+.Checklist:hover a {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  display: block;
+  background: white;
+
+  border: 1px solid white;
+  -moz-box-shadow: inset 0 5px 10px white;
+  -webkit-box-shadow: inset 0 5px 10px white;
+  box-shadow: inset 0 5px 10px white;
+}
 .maintanence{
-  margin-left: 8%;
-  margin-top: 7%;
-  width: 20em;  height: 2em;
-  background: #AAACF0;
+  margin-left: 5%;
+  margin-top: 5%;
+  width: 25em;  height: 5em;
+  background: -webkit-linear-gradient(#81222a, #c6474e); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#81222a, #c6474e); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#81222a, #c6474e); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#81222a, #c6474e);
   font-weight: bolder;
   border: 2px solid;
-  box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.75);
+  border-color: black;
+   color:white;
+  box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.75);
+  float: left;
+ 
+}
+
+.maintanence:hover {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid white;
+}
+.maintanence:hover a {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  display: block;
+  background: white;
+
+  border: 1px solid white;
+  -moz-box-shadow: inset 0 5px 10px white;
+  -webkit-box-shadow: inset 0 5px 10px white;
+  box-shadow: inset 0 5px 10px white;
+}
+.order{
+  margin-left: 5%;
+  margin-top: 5%;
+  width: 25em;  height: 5em;
+  background: -webkit-linear-gradient(#81222a, #c6474e); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#81222a, #c6474e); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#81222a, #c6474e); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#81222a, #c6474e);
+  font-weight: bolder;
+  border: 2px solid;
+   border-color: black;
+   color:white;
+  box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.75);
     float: left;
 }
 
-.order{
-  margin-left: 40%;
-  margin-top: 7%;
-  width: 20em;  height: 2em;
-  background: #AAACF0;
-  font-weight: bolder;
-  border: 2px solid;
-  box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.75);
-    float: left;
+.order:hover {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid white;
+}
+.order:hover a {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  display: block;
+  background: white;
+
+  border: 1px solid white;
+  -moz-box-shadow: inset 0 5px 10px white;
+  -webkit-box-shadow: inset 0 5px 10px white;
+  box-shadow: inset 0 5px 10px white;
 }
 
 .allTablesButton{
