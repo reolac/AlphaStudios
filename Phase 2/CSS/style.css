@@ -206,7 +206,6 @@ progress{
 .progressText{
 	position: relative;
     top: 1.20em;
-    margin-left: 17%;
     word-spacing: 25px;
 }
 html{
