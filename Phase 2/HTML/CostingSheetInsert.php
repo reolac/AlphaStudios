@@ -13,7 +13,10 @@ if(mysqli_connect_errno())
 }
 if(isset($_POST['submit']))
 {
-	if($stmt = mysqli_prepare($conn, "INSERT INTO CostingSheet (Site,Job,Dates,Ref,WorkOrderRef,Cust,TotalMats,CarriageCharge,MaterialsPlus15,TotalMaterialCost,supplier, ContractorName, SubContractorName, SubConHr, SubConcRate,SubConcTot,SubConcET,labourCost, TotalCost) 
+	$wr = $_SESSION['WR'];
+	$result2 = mysqli_query($conn, "SELECT * FROM WorkOrder WHERE WorkOrderRef = '$wr'");
+	$row = mysqli_fetch_array($result2, MYSQLI_ASSOC);
+	if($stmt = mysqli_prepare($conn, "INSERT INTO CostingSheet (Site,Job,Dates,Ref,cWorkOrd,Cust,TotalMats,CarriageCharge,MaterialsPlus15,TotalMaterialCost,supplier, ContractorName, SubContractorName, SubConHr, SubConcRate,SubConcTot,SubConcET,labourCost, TotalCost) 
 		VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"))
 	{
 		$cust = $_POST['costingCustomer'];
@@ -21,7 +24,7 @@ if(isset($_POST['submit']))
 		$job = $_POST['costingJob'];
 		$date = $_POST['costingDate'];
 		$ref = $_POST['costingRef'];
-		$won = $_POST['costingWON'];
+		$won = $row['WorkOrder_ID'];
 		$mttc =$_POST['materialsTableTCost'];
 		$mtc = $_POST['materialsTableCarriage'];
 		$mtcp = $_POST['materialsTableTCostPer'];
@@ -37,7 +40,7 @@ if(isset($_POST['submit']))
 		$tT = $_POST['TableTotal'];
 		echo $cN;
 		echo $sCN;
-		mysqli_stmt_bind_param($stmt ,'ssssssddddsssdddddd', $site, $job, $date, $ref, $won , $cust, $mttc, $mtc, $mtcp, $mtt, $sup, $cN, $sCN, $sCH, $sCU ,$sCT ,$sCP, $lTC, $tT);
+		mysqli_stmt_bind_param($stmt ,'ssssdsddddsssdddddd', $site, $job, $date, $ref, $won , $cust, $mttc, $mtc, $mtcp, $mtt, $sup, $cN, $sCN, $sCH, $sCU ,$sCT ,$sCP, $lTC, $tT);
 		mysqli_stmt_execute($stmt);
 		mysqli_stmt_close($stmt);
 	}

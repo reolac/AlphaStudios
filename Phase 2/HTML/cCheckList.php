@@ -34,9 +34,8 @@
         <div class="progressText">
         <b>Enquiry</b> -> Check_List -> Verbal -> Costing_Sheet -> Purchase_Order -> Unknown -> Maintenence
     </div>  
-<progress value="20" max="70"></progress>
+    <progress value="20" max="70"></progress>
         <form method="POST" action="CheckListInsert.php">
-            
                 <table class="checkListTable">
                     <tr>
                         <th>Item</th>
@@ -95,6 +94,5 @@
         <input type="submit" id="sendCheckList" name="submit" class="createButton"></input>
         </div>
         </form>
-   
     </body>
 </html>

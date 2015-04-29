@@ -17,10 +17,7 @@
       #header('Location: login.html');
     }?>
 	<body>
-	
-			<img src="../img/GELogo.jpg"> 
-		
-		
+	<img src="../img/GELogo.jpg"> 
 	<div id='cssmenu'>
 		<ul>
             <li class='last'><a href='#'><span>Home</span></a></li>
@@ -28,16 +25,11 @@
    			<li><a href='#'><span>View</span></a></li>
    			<li class='last'><a href='#'><span>Logout</span></a></li>
 			<li class='last'><a href='#'><span>Help</span></a></li>
-
-
 		</ul>
 	</div>
-		
-
 		<h1 class="subTitle">ENQUIRY - ORDER REGISTER</h1>
 		<div class="progressText">
 		<b>Enquiry</b> -> Check_List -> Verbal -> Costing_Sheet -> Purchase_Order -> Unknown -> Maintenence
-	</div>	
 	<progress value="10" max="70"></progress>
 		<form method="POST" action="insert.php">
 			<table class="enquiryTable">
@@ -77,11 +69,10 @@
 					"text"></td>
 				</tr>
 			</table>
-                    <div id="container">
+            <div id="container">
 			<input class="createButton" id="button" type="submit" name="submit" value="Submit">
-                    </div>
-                        </form>
+        </div>
+    </form>
 	</div>
-        </body>
-    
+    </body>
 </html>

@@ -6,9 +6,7 @@
         <link rel="stylesheet" type="text/css" href="../css/style.css">
     </head>
     <body>
-    	
     <img src="../img/GELogo.jpg"> 
-
 	<div id='cssmenu'>
 		<ul>
    			<li class='last'><a href='#'><span>Create</span></a></li>
@@ -53,8 +51,10 @@
 			}
 			$result = mysqli_query($conn, "SELECT * FROM enquiry");
 			$result2 = mysqli_query($conn, "SELECT * FROM customer");
+			$result3 = mysqli_query($conn, "SELECT * FROM WorkOrder");
 			while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
-				$row2 = mysqli_fetch_array($result2, MYSQLI_ASSOC)
+				$row2 = mysqli_fetch_array($result2, MYSQLI_ASSOC);
+				$row3 = mysqli_fetch_array($result3, MYSQLI_ASSOC)
 			?>
 			<tr>
 				<td><?php echo $row['TimeOfEnquiry']?></td>
@@ -65,8 +65,8 @@
 				<td><?php echo $row['QuotationRef']?></td>
 				<td><?php echo $row['CustOrderRef']?></td>
 				<td><?php echo $row['QuoteReview']?></td>
-				<td><?php echo "<a href=redirect.php?clickedcell=$row[WorkOrdRef]>$row[WorkOrdRef]</a>"?></td>
-				<td><?php echo $row['WorkStatus']?></td>
+				<td><?php echo "<a href=redirect.php?clickedcell=$row3[WorkOrderRef]>$row3[WorkOrderRef]</a>"?></td>
+				<td><?php echo $row3['WorkStatus']?></td>
 			</tr>
 			<?php
 			}

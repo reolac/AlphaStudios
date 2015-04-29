@@ -4,6 +4,7 @@
 # actual authentication 
 # hiding password/hashing
 ob_start();
+session_start();
 $servername = "localhost:3306";
 $username = "root";
 $password = "bill1995";
@@ -32,12 +33,14 @@ if(isset($_POST['submit']))
 		{	
 			if($hash==crypt($_POST['p'],$hash))
 			{
-				header('Location: cHome.html');	
+				$_SESSION['loggedin'] = true;
+				header('Location: landingpage.php');	
 			}
 		}
 		else
 		{
-			header('Location: login.html');
+			echo "fail";
+			#header('Location: login.html');
 		}
 	}
 }

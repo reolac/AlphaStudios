@@ -27,8 +27,11 @@
         exit();
     }
     $wr = $_SESSION['WR'];
-    $result = mysqli_query($conn, "SELECT DrawRefNum, CostingSheet, Quotation, CustPurOrdNum, JobSheet, PurOrdNum, DelNotNum, InvNum, RejNum, TestCertNum, LPTest, PhotoRefNum FROM checklist WHERE JobSheet = '$wr'");
+    $result2 = mysqli_query($conn, "SELECT * FROM WorkOrder WHERE WorkOrderRef = '$wr'");
+    $row2 = mysqli_fetch_array($result2, MYSQLI_ASSOC);  
+    $result = mysqli_query($conn, "SELECT DrawRefNum, CostingSheet, Quotation, CustPurOrdNum, PurOrdNum, DelNotNum, InvNum, RejNum, TestCertNum, LPTest, PhotoRefNum FROM checklist WHERE jWorkOrd = '$row2[WorkOrder_ID]'");
     while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
+        $row2 = mysqli_fetch_array($result2, MYSQLI_ASSOC);
     ?>
     <body>
 		<div id= "container">
@@ -40,8 +43,6 @@
             <li class='active'><a href='#'><span>View</span></a></li>
             <li class='last'><a href='#'><span>Logout</span></a></li>
             <li class='last'><a href='#'><span>Help</span></a></li>
-
-
         </ul>
     </div>
         <div class="content">
@@ -68,7 +69,7 @@
                     <td><?php echo $row['CustPurOrdNum']?></td>
                 <tr>
                     <td class="fontTh"> Job Sheet </td>
-                    <td><?php echo $row['JobSheet']?></td>
+                    <td><?php echo $row2['WorkOrderRef']?></td>
                 </tr>
                 <tr>
                     <td class="fontTh"> Purchase Order Number </td>

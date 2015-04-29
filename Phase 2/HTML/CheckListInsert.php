@@ -16,14 +16,23 @@ if(mysqli_connect_errno())
 }
 if(isset($_POST['submit']))
 {
-	if($stmt = mysqli_prepare($conn, "INSERT INTO checklist (DrawRefNum, CostingSheet, Quotation, CustPurOrdNum, JobSheet, PurOrdNum, DelNotNum, InvNum, RejNum, TestCertNum, LPTest, PhotoRefNum)
+	$WoR = $_SESSION['WoR'];
+	if($stmt = mysqli_prepare($conn, "SELECT WorkOrder_ID FROM WorkOrder WHERE WorkOrderRef = ?"))
+	{
+		mysqli_stmt_bind_param($stmt,'s',$WoR);
+		mysqli_stmt_execute($stmt);
+		mysqli_stmt_bind_result($stmt, $workid);
+		mysqli_stmt_fetch($stmt);
+		mysqli_stmt_close($stmt);
+	}
+	echo $workid;
+	if($stmt = mysqli_prepare($conn, "INSERT INTO checklist (DrawRefNum, CostingSheet, Quotation, CustPurOrdNum, PurOrdNum, DelNotNum, InvNum, RejNum, TestCertNum, LPTest, PhotoRefNum, jWorkOrd)
 	VALUES(?,?,?,?,?,?,?,?,?,?,?,?)"))
 	{
 		$DrF = $_POST['drawingReferenceNumber'];
 		$CS = $_POST['costingSheet'];
 		$Quo = $_POST['quotation'];
 		$CpoN = $_POST['customPurchaseOrderNumber'];
-		$JS = $_POST['jobSheet'];
 		$PoN = $_POST['purchaseOrderNumber'];
 		$DnN = $_POST['deliveryNoteNumber'];
 		$IN = $_POST['invoiceNumber'];
@@ -31,14 +40,10 @@ if(isset($_POST['submit']))
 		$TcN = $_POST['testCertificateNumber'];
 		$LtN = $_POST['lpTestNumber'];
 		$PrN = $_POST['photoReferenceNumber'];
-		mysqli_stmt_bind_param($stmt , 'ssssssssssss', $DrF, $CS, $Quo, $CpoN, $JS, $PoN, $DnN, $IN, $RN, $TcN, $LtN, $PrN);
+		mysqli_stmt_bind_param($stmt , 'sssssssssssd', $DrF, $CS, $Quo, $CpoN, $PoN, $DnN, $IN, $RN, $TcN, $LtN, $PrN, $workid);
 		mysqli_stmt_execute($stmt);
 		mysqli_stmt_close($stmt);
 	}
-	#$query = "INSERT INTO checklist (DrawRefNum, CostingSheet, Quotation, CustPurOrdNum, JobSheet, PurOrdNum, DelNotNum, InvNum, RejNum, TestCertNum, LPTest, PhotoRefNum)
-	#VALUES ('$_POST[drawingReferenceNumber]','$_POST[costingSheet]','$_POST[quotation]','$_POST[customPurchaseOrderNumber]','$_POST[jobSheet]','$_POST[purchaseOrderNumber]','$_POST[deliveryNoteNumber]','$_POST[invoiceNumber]','$_POST[rejectNumber]','$_POST[testCertificateNumber]','$_POST[lpTestNumber]','$_POST[photoReferenceNumber]')";
-	#mysqli_query($conn,$query);
-	echo "inserted";
 	exit();
 }
 ?>
