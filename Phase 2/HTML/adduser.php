@@ -5,16 +5,18 @@
 		<title>Add User</title>
 		<link rel="stylesheet" type="text/css" href="../css/Loginpage.css">
 	</head>
-	<?php 
+	<?php
+	//php Author: Daniel Bentley eeu236 
     ob_start();
     session_start();
+    //redirects if the user isn't logged in
     if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) 
     {
       #user logged in
     }
     else 
     {
-      #header('Location: login.html');
+      header('Location: login.html');
     }?>
 	<body>
 		<div class="companyHeader">

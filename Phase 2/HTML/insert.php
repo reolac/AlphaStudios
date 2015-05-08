@@ -1,4 +1,5 @@
 <?php
+//php Author: Daniel Bentley eeu236
 ob_start();
 session_start();
 $servername = "localhost:3306";
@@ -6,13 +7,14 @@ $username = "root";
 $password = "bill1995";
 $dbname = "softwarehut";
 
+//Connects to the database
 $conn = mysqli_connect($servername,$username,$password,$dbname);
-
 if(mysqli_connect_errno())
 {
 	printf("connection failed :%s\n", mysqli_connect_error());
 	exit();
 }
+//Inserts into relevant tables in database
 if(isset($_POST['submit']))
 {
 	if($stmt = mysqli_prepare($conn, "INSERT INTO customer (Address) VALUES (?)"))

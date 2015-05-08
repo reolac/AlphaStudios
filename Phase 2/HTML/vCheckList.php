@@ -6,16 +6,19 @@
         <link rel="stylesheet" type="text/css" href="../css/style.css">
     </head>
     <?php
+    //php Author: Daniel Bentley eeu236
     ob_start();
     session_start();
+    //redirects if the user isn't logged in
     if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) 
     {
       #user logged in
     }
     else 
     {
-      #header('Location: login.html');
+      header('Location: login.html');
     }
+    //Connects to the database
     $servername = "localhost:3306";
     $username = "root";
     $password = "bill1995";
@@ -28,7 +31,7 @@
     }
     $wr = $_SESSION['WR'];
     $result2 = mysqli_query($conn, "SELECT * FROM WorkOrder WHERE WorkOrderRef = '$wr'");
-    $row2 = mysqli_fetch_array($result2, MYSQLI_ASSOC);  
+    $row2 = mysqli_fetch_array($result2, MYSQLI_ASSOC);
     $result = mysqli_query($conn, "SELECT DrawRefNum, CostingSheet, Quotation, CustPurOrdNum, PurOrdNum, DelNotNum, InvNum, RejNum, TestCertNum, LPTest, PhotoRefNum FROM checklist WHERE jWorkOrd = '$row2[WorkOrder_ID]'");
     while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
         $row2 = mysqli_fetch_array($result2, MYSQLI_ASSOC);
@@ -69,7 +72,7 @@
                     <td><?php echo $row['CustPurOrdNum']?></td>
                 <tr>
                     <td class="fontTh"> Job Sheet </td>
-                    <td><?php echo $row2['WorkOrderRef']?></td>
+                    <td><?php echo $wr?></td>
                 </tr>
                 <tr>
                     <td class="fontTh"> Purchase Order Number </td>

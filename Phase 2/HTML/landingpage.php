@@ -5,9 +5,11 @@
         <title>Home Page</title>
         <link rel="stylesheet" type="text/css" href="../css/landingpage.css">
     </head>
-    <?php 
+    <?php
+    //php Author: Daniel Bentley eeu236 
     ob_start();
     session_start();
+    //redirects if the user isn't logged in
     if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) 
     {
       #user logged in
@@ -42,7 +44,7 @@
     <button class="Costing" type="submit">Costing</button>
     </form>
 
-    <form action="cEnquiry.php">
+    <form action="cCheckList.php">
     <button class="Checklist"type="submit">Checklist</button>
     </form>
 

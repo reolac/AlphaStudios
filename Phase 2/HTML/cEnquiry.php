@@ -5,16 +5,18 @@
 		<link href="../css/style.css" rel="stylesheet" type="text/css">
 		<title>Create Enquiry Form</title>
 	</head>
-	<?php 
+	<?php
+	//php Author: Daniel Bentley eeu236 
     ob_start();
     session_start();
+    //redirects if the user isn't logged in
     if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) 
     {
       #user logged in
     }
     else 
     {
-      #header('Location: login.html');
+      header('Location: login.html');
     }?>
 	<body>
 	<img src="../img/GELogo.jpg"> 

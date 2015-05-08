@@ -1,4 +1,5 @@
 <?php
+//php Author: Daniel Bentley eeu236
 ob_start();
 session_start();
 $servername = "localhost:3306";
@@ -6,11 +7,14 @@ $username = "root";
 $password = "bill1995";
 $dbname = "softwarehut";
 $conn = mysqli_connect($servername,$username,$password,$dbname);
+
+//Connects to the database
 if(mysqli_connect_errno())
 {
 	printf("connection failed :%s\n", mysqli_connect_error());
 	exit();
 }
+//Inserts into relevant tables in database
 if(isset($_POST['submit']))
 {
 	$wr = $_SESSION['WR'];
@@ -38,8 +42,7 @@ if(isset($_POST['submit']))
 		$sCP = $_POST['contractTableTCostPer'];
 		$lTC = $_POST['labourTableTCost'];
 		$tT = $_POST['TableTotal'];
-		echo $cN;
-		echo $sCN;
+
 		mysqli_stmt_bind_param($stmt ,'ssssdsddddsssdddddd', $site, $job, $date, $ref, $won , $cust, $mttc, $mtc, $mtcp, $mtt, $sup, $cN, $sCN, $sCH, $sCU ,$sCT ,$sCP, $lTC, $tT);
 		mysqli_stmt_execute($stmt);
 		mysqli_stmt_close($stmt);
@@ -49,7 +52,7 @@ if(isset($_POST['submit']))
 	$rows2 = $_POST['servicesTableCount'];
 	$rows3 = $_POST['labourTableCount'];
 	echo $rows3;
-	if($stmt = mysqli_prepare($conn, "SELECT CostingSheet_ID FROM CostingSheet WHERE WorkOrderRef = ?"))
+	if($stmt = mysqli_prepare($conn, "SELECT CostingSheet_ID FROM CostingSheet WHERE cWorkOrd = ?"))
 	{
 		mysqli_stmt_bind_param($stmt, 's',$won);
 		mysqli_stmt_execute($stmt);
@@ -111,10 +114,6 @@ if(isset($_POST['submit']))
 			$lTUC = $_POST[$out3];
 			$lTTC = $_POST[$out4];
 
-			echo $lTD;
-			echo $lTR;
-			echo $lTUC;
-			echo $lTTC;
 			mysqli_stmt_bind_param($stmt, 'sdddd', $lTD, $lTR, $lTUC, $lTTC, $costid);
 			mysqli_stmt_execute($stmt);
 			mysqli_stmt_close($stmt);
@@ -122,4 +121,6 @@ if(isset($_POST['submit']))
 		$count = $count + 1;
 	}
 }
+$_SESSION['WR'] = $WoR;
+header('Location: cquoteSheet.php');
 ?>

@@ -7,16 +7,18 @@
         <link rel="stylesheet" type="text/css" href="../css/style.css">
         <script language="javascript" type"text/javascript" src="../js/script.js"></script>
     </head>
-    <?php 
+    <?php
+    //php Author: Daniel Bentley eeu236 
     ob_start();
     session_start();
+    //redirects if the user isn't logged in
     if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) 
     {
       #user logged in
     }
     else 
     {
-      #header('Location: login.html');
+      header('Location: login.html');
     }
     $wr = $_SESSION['WR'];?>
     <body>
@@ -176,7 +178,7 @@
                         <td class="no2">£<input type="text" name="labourTableUCost0" id="labourTableUCost0" value="0.00" onkeyup="calc('labourTable', 0); totalIt('labourTable', 0); grandTotal()"/></td>
                         <td class="no">£<input type="text" name="labourTableTCost0" id="labourTableTCost0" value="0.00" readonly/></td>
                     </tr>  
-                </tabl£e>
+                </table>
                 <table class="desc">
                     <tr>
                         <td class="col1"></td>
@@ -205,6 +207,5 @@
             <input type="submit" id="sendCheckList" name="submit" class="createButton"></input>
             </div>
         </form>
-        
     </body>
 </html>

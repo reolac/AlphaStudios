@@ -1,4 +1,5 @@
 <?php
+//php Author: Daniel Bentley eeu236
 ob_start();
 session_start();
 
@@ -6,7 +7,7 @@ $servername = "localhost:3306";
 $username = "root";
 $password = "bill1995";
 $dbname = "softwarehut";
-
+//Connects to the database
 $conn = mysqli_connect($servername,$username,$password,$dbname);
 
 if(mysqli_connect_errno())
@@ -14,6 +15,7 @@ if(mysqli_connect_errno())
 	printf("connection failed :%s\n", mysqli_connect_error());
 	exit();
 }
+//Inserts into relevant tables in database
 if(isset($_POST['submit']))
 {
 	$WoR = $_SESSION['WoR'];
@@ -25,7 +27,6 @@ if(isset($_POST['submit']))
 		mysqli_stmt_fetch($stmt);
 		mysqli_stmt_close($stmt);
 	}
-	echo $workid;
 	if($stmt = mysqli_prepare($conn, "INSERT INTO checklist (DrawRefNum, CostingSheet, Quotation, CustPurOrdNum, PurOrdNum, DelNotNum, InvNum, RejNum, TestCertNum, LPTest, PhotoRefNum, jWorkOrd)
 	VALUES(?,?,?,?,?,?,?,?,?,?,?,?)"))
 	{
@@ -44,6 +45,8 @@ if(isset($_POST['submit']))
 		mysqli_stmt_execute($stmt);
 		mysqli_stmt_close($stmt);
 	}
-	exit();
 }
+$_SESSION['WR'] = $WoR;
+header('Location: cCostingSheet.php');
+exit();
 ?>

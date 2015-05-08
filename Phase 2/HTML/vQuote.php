@@ -6,17 +6,20 @@
 		<link rel="stylesheet" type="text/css" href="../css/style.css">
 		<link rel="stylesheet" type="text/css" href="../css/Quotesheet.css">
 	</head>
-	<?php 
+	<?php
+	//php Author: Daniel Bentley eeu236 
     ob_start();
     session_start();
+    //redirects if the user isn't logged in
     if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) 
     {
       #user logged in
     }
     else 
     {
-      #header('Location: login.html');
+      header('Location: login.html');
     }
+    //Connects to the database
 	$servername = "localhost:3306";
 	$username = "root";
 	$password = "bill1995";
@@ -53,7 +56,6 @@
 				<textarea class ='area' name='textarea' rows='20' cols='101' >
 					<?php echo $row2['message']?>
 				</textarea>
-				<input type="submit" id="sendCheckList" name="submit" class="createButton"></input>
 			</form>
 		</div>
 	</body>

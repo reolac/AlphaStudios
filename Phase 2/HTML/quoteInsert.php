@@ -1,4 +1,5 @@
 <?php
+//php Author: Daniel Bentley eeu236
 ob_start();
 session_start();
 $servername = "localhost:3306";
@@ -6,6 +7,7 @@ $username = "root";
 $password = "bill1995";
 $dbname = "softwarehut";
 $conn = mysqli_connect($servername,$username,$password,$dbname);
+//Connects to the database
 if(mysqli_connect_errno())
 {
 	printf("connection failed :%s\n", mysqli_connect_error());
@@ -24,4 +26,5 @@ if($stmt = mysqli_prepare($conn, "INSERT INTO Quote (name,message,qWorkOrder) VA
 	mysqli_stmt_execute($stmt);
 	mysqli_stmt_close($stmt);
 }
+header('Location: landingpage.php');
 ?>

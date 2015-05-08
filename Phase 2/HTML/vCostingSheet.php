@@ -1,23 +1,25 @@
 <!DOCTYPE HTML>
 <html lang="en-GB">
-
     <head>
         <meta charset="UTF-8">
         <title>View Costing Cheet</title>
         <link rel="stylesheet" type="text/css" href="../css/style.css">
         <script language="javascript" type"text/javascript" src="../js/script.js"></script>
     </head>
-    <?php 
+    <?php
+    //php Author: Daniel Bentley eeu236 
     ob_start();
     session_start();
+    //redirects if the user isn't logged in
     if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) 
     {
       #user logged in
     }
     else 
     {
-      #header('Location: login.html');
+      header('Location: login.html');
     }
+    //Connects to the database
     $servername = "localhost:3306";
     $username = "root";
     $password = "bill1995";
@@ -33,7 +35,12 @@
     $row2 = mysqli_fetch_array($result2, MYSQLI_ASSOC);  
     $result = mysqli_query($conn, "SELECT * FROM costingSheet WHERE cWorkOrd = '$row2[WorkOrder_ID]'");
     while($row = mysqli_fetch_array($result, MYSQLI_ASSOC))
-
+        $cust = $row['Cust'];
+        $site = $row['site'];
+        $job = $row['Job'];
+        echo $cust;
+        echo $site;
+        echo $job;
     ?>
     <body>
         <form method="POST" action="CostingSheetInsert.php">
@@ -54,11 +61,11 @@
                 Enquiry -> Check_List -> Verbal -> <B>Costing_Sheet</B> -> Purchase_Order -> Unknown -> Maintenence
             </div>  
             <progress value="50" max="100"></progress>
-    		<h1 class="subTitle">New Costing Sheet</h1>
+    		<h1 class="subTitle">View Costing Sheet</h1>
             <div class="costForm">
-                <div>Customer: <?php echo"<input type='text' name='costingCustomer' id='costingSheet' value='$row[Cust]'/>"?></div>
-                <div>Site:<?php echo "<input type='text' name='costingSite' id='costingSheet'/> value='$row[Site]'"?></div>
-                <div>Job: <input type="text" name="costingJob" id="costingSheet"/></div>
+                <div>Customer: <?php echo "<input type='text' name='costingCust' id='costingSheet' value='$cust'/>"?></div>
+                <div>Site: <?php echo "<input type='text' name='costingSite' id='costingSheet' value='$site'/>"?></div>
+                <div>Job: <?php echo "<input type='text' name='costingJob' id='costingSheet' value='$job'/>"?></div>
                 <div>Date: <input type="date" name="costingDate" id="costingSheet"/></div>
                 <div>Ref: <input type="text" name="costingRef" id="costingSheet"/></div>
                 <div>W.O.N: <?php echo"<input type='text' name='costingWON' id='costingSheet' value='$wr'>"?></div>
@@ -216,9 +223,7 @@
                 </table>
             </div>
             <div id="container">
-            <input type="submit" id="sendCheckList" name="submit" class="createButton"></input>
             </div>
         </form>
-        
     </body>
 </html>
